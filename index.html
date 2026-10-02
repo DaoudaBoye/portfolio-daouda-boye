@@ -505,6 +505,54 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 .pcard-lead .pc-frame{aspect-ratio:3/1;padding:3%}
 @media (max-width:760px){.pcard-lead .pc-frame{aspect-ratio:16/9;padding:5%}}
 .pc-frame{padding:3.5% 4%}
+
+/* Section formation */
+.degree{margin-top:32px;padding:26px 0 26px 24px;border-left:3px solid var(--mark)}
+.deg-meta{margin:0;font-size:14px;color:var(--graphite)}
+.degree h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.2;margin:6px 0 6px;max-width:40ch}
+.deg-spec{margin:0;font-size:18px}
+.deg-mention{display:inline-block;margin:14px 0 0;font-size:14px;font-weight:600;padding:3px 10px;border:1px solid var(--ink);border-radius:2px}
+.deg-thesis{margin:16px 0 0;max-width:60ch;color:var(--graphite)}
+.deg-thesis a{color:var(--ink);font-weight:500;white-space:nowrap}
+.edu-list{margin:28px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;padding-top:20px;border-top:1px solid var(--rule)}
+.edu-list dt{font-size:15px;color:var(--graphite);padding-top:2px}
+.edu-list dd{margin:0}
+@media (max-width:640px){.edu-list{grid-template-columns:1fr;gap:2px}.edu-list dd{margin-bottom:12px}.degree{padding-left:16px}}
+@media (max-width:1060px) and (min-width:861px){.nav{gap:14px;font-size:14px}.brand span{display:none}}
+
+/* Parcours : frise verticale */
+.tl{margin-top:36px}
+.tl .ledger{margin:0}
+.tl .ledger>li{border:0;padding:0}
+.tl .ledger>li:first-child{border-top:0}
+.tl .ledger>li .when{padding:24px 0 0}
+.tl .ledger>li>div{position:relative;border-left:1px solid var(--ink);padding:20px 0 26px 30px}
+.tl .ledger>li>div::before{content:"";position:absolute;left:-6px;top:28px;width:11px;height:11px;border-radius:50%;border:1px solid var(--ink);background:var(--paper)}
+.tl .tl-now>li>div::before{background:var(--mark);border-color:var(--mark-ink)}
+.tl-group{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px}
+.tl-group p{margin:0;border-left:1px solid var(--ink);padding:18px 0 2px 30px;font-family:var(--cond);font-weight:600;font-size:17px}
+.tl-group small{display:block;font-family:var(--sans);font-weight:400;font-size:14px;color:var(--graphite);margin-top:2px}
+.tl-group + .tl-past{margin-top:0}
+@media (max-width:860px){
+  .tl-group{grid-template-columns:1fr;gap:0}
+  .tl-group>span{display:none}
+  .tl .ledger>li{position:relative;border-left:1px solid var(--ink);padding-left:30px;gap:2px}
+  .tl .ledger>li .when{padding:20px 0 0}
+  .tl .ledger>li>div{border-left:0;padding:2px 0 22px 0;position:static}
+  .tl .ledger>li>div::before{left:-6px;top:25px}
+  .tl .ledger>li{position:relative}
+}
+
+/* Contact simplifié */
+.contact{padding:clamp(72px,9vw,120px) 0 clamp(56px,7vw,88px)}
+.contact-title{font-family:var(--cond);font-weight:700;font-size:clamp(44px,6vw,80px);line-height:.95;letter-spacing:-.01em;margin:18px 0 0;max-width:none}
+.contact-lead{font-family:var(--serif);font-size:clamp(18px,1.7vw,21px);line-height:1.55;max-width:54ch;margin:20px 0 0;color:var(--graphite)}
+.contact-mail{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:32px}
+.mail-link{font-family:var(--serif);font-size:clamp(22px,3vw,34px);text-decoration-thickness:1px;text-underline-offset:6px;overflow-wrap:anywhere}
+.mail-link:hover{text-decoration-color:var(--mark)}
+.copy-status{font-size:14px;color:var(--graphite);min-width:1px}
+.contact-links{list-style:none;margin:28px 0 0;padding:16px 0 0;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:10px 32px;font-size:16px;color:var(--graphite)}
+.contact-links a{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -517,7 +565,8 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
       <a href="#projets">Projets</a>
       <a href="#methode">Méthode</a>
       <a href="#parcours">Parcours</a>
-      <a href="#enseignement">Formation</a>
+      <a href="#formation">Formation</a>
+      <a href="#enseignement">Enseignement</a>
       <a href="#contact">Contact</a>
       <button class="theme" type="button" id="theme" aria-label="Changer de thème">Thème sombre</button>
     </nav>
@@ -863,11 +912,13 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
       <div class="sec-label">Parcours</div>
       <div class="sec-body">
         <h2 id="t-parcours">Expérience.</h2>
-        <ol class="ledger" reversed>
+        <div class="tl">
+          <div class="tl-group"><span aria-hidden="true"></span><p>Depuis 2026, en parallèle<small>En plus de mes cours à l'UNIPRO et à l'IAM</small></p></div>
+          <ol class="ledger tl-now">
           <li>
             <span class="when">Juil. 2026 – aujourd'hui</span>
             <div>
-              <h3>Appui technique, données sanitaires (DHIS2)<span class="kind">Prestation de services</span><span class="now">En cours</span></h3>
+              <h3>Appui technique, données sanitaires (DHIS2)<span class="kind">Prestation de services</span></h3>
               <p class="org">Ministère de la Santé et de l'Hygiène publique</p>
               <ul>
                 <li>Intégration et contrôle qualité des données sanitaires de routine dans DHIS2 : complétude, cohérence, ponctualité.</li>
@@ -879,7 +930,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <li>
             <span class="when">Févr. 2026 – aujourd'hui</span>
             <div>
-              <h3>Ingénieur logiciel, data et infrastructure<span class="kind">Freelance</span><span class="now">En cours</span></h3>
+              <h3>Ingénieur logiciel, data et infrastructure<span class="kind">Freelance</span></h3>
               <p class="org">SenPay, à distance</p>
               <ul>
                 <li>Déploiement et évolution d'une plateforme Angular et Spring Boot sur serveur Linux.</li>
@@ -891,7 +942,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <li>
             <span class="when">Janv. 2026 – aujourd'hui</span>
             <div>
-              <h3>Gérant, ingénieur data et IA<span class="kind">Entrepreneuriat</span><span class="now">En cours</span></h3>
+              <h3>Gérant, ingénieur data et IA<span class="kind">Entrepreneuriat</span></h3>
               <p class="org">Technosus</p>
               <ul>
                 <li>Conception de plateformes et d'applications métiers, dont XAMIO.</li>
@@ -899,6 +950,9 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
               </ul>
             </div>
           </li>
+          </ol>
+          <div class="tl-group"><span aria-hidden="true"></span><p>2023 – 2025, au FIMF</p></div>
+          <ol class="ledger tl-past">
           <li>
             <span class="when">Juil. 2024 – déc. 2025</span>
             <div>
@@ -924,18 +978,31 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
               </ul>
             </div>
           </li>
-        </ol>
-
-        <div class="edu">
-          <h3>Formation</h3>
-          <dl>
-            <dt>2021–2024</dt><dd>Diplôme d'ingénieur de conception des télécommunications, spécialité ingénierie des données et intelligence artificielle, ESMT Dakar. Mention très bien. Mémoire : plateforme de prédiction de la solvabilité des emprunteurs en microfinance par machine learning.</dd>
-            <dt>2021–2022</dt><dd>Licence en sciences de l'ingénieur, télécommunications, ESMT Dakar</dd>
-            <dt>2017–2021</dt><dd>Licence en télécommunications, Université Gaston Berger, Saint-Louis</dd>
-            <dt>Certification</dt><dd>Finance digitale, Centre d'Excellence Africaine en Mathématiques, Informatique et TIC</dd>
-            <dt>Langues</dt><dd>Français courant, anglais intermédiaire</dd>
-          </dl>
+          </ol>
         </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- FORMATION -->
+  <section class="sec" id="formation" aria-labelledby="t-formation">
+    <div class="wrap sec-grid">
+      <div class="sec-label">Formation</div>
+      <div class="sec-body">
+        <h2 id="t-formation">Formation.</h2>
+        <div class="degree">
+          <p class="deg-meta num">ESMT Dakar, 2021–2024</p>
+          <h3>Diplôme d'ingénieur de conception des télécommunications</h3>
+          <p class="deg-spec">Spécialité ingénierie des données et intelligence artificielle</p>
+          <p class="deg-mention">Mention très bien</p>
+          <p class="deg-thesis">Mon mémoire, réalisé au FIMF, porte sur la prédiction de la solvabilité des emprunteurs en microfinance par machine learning. <a href="#projet-solvabilite">Voir le projet</a></p>
+        </div>
+        <dl class="edu-list">
+          <dt class="num">2021–2022</dt><dd>Licence en sciences de l'ingénieur, télécommunications, ESMT Dakar</dd>
+          <dt class="num">2017–2021</dt><dd>Licence en télécommunications, Université Gaston Berger, Saint-Louis</dd>
+          <dt>Certification</dt><dd>Finance digitale, Centre d'Excellence Africaine en Mathématiques, Informatique et TIC</dd>
+          <dt>Langues</dt><dd>Français courant, anglais intermédiaire</dd>
+        </dl>
       </div>
     </div>
   </section>
@@ -943,7 +1010,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
   <!-- 5. TRANSMISSION -->
   <section class="sec" id="enseignement" aria-labelledby="t-enseignement">
     <div class="wrap sec-grid">
-      <div class="sec-label">Transmission</div>
+      <div class="sec-label">Enseignement</div>
       <div class="sec-body">
         <h2 id="t-enseignement">J'enseigne aussi.</h2>
         <div class="teach">
@@ -991,47 +1058,17 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
       <div class="sec-grid">
         <div class="sec-label">Contact</div>
         <div class="sec-body">
-          <p class="qs">Des données à exploiter, un outil à construire ou un cours à organiser ?</p>
-          <h2 id="t-contact" class="go" style="font-family:var(--cond);max-width:none">Écrivez-moi.</h2>
-
-          <div class="contact-grid">
-            <div class="direct">
-              <ul class="reasons" aria-label="Sujets pour lesquels me contacter">
-                <li><b>Data et business intelligence</b><span>Structuration de données, tableaux de bord, reporting</span></li>
-                <li><b>IA appliquée</b><span>Modèles d'aide à la décision, automatisation</span></li>
-                <li><b>Applications métiers</b><span>Développement et mise en production</span></li>
-                <li><b>Missions</b><span>En freelance, ou en renfort d'une équipe</span></li>
-                <li><b>Cours et formations</b><span>IA, gouvernance des données, Power BI, SQL</span></li>
-              </ul>
-              <p style="margin-top:24px"><small>Email</small><a href="mailto:daoudaboye19@gmail.com">daoudaboye19@gmail.com</a></p>
-              <p><small>LinkedIn</small><a href="https://www.linkedin.com/in/daouda-boye-856222182" target="_blank" rel="noopener">linkedin.com/in/daouda-boye-856222182</a></p>
-            </div>
-            <form id="form" novalidate>
-              <div class="field">
-                <label for="f-name">Nom</label>
-                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
-                <p class="err" id="e-name"></p>
-              </div>
-              <div class="field">
-                <label for="f-mail">Email</label>
-                <input id="f-mail" name="email" type="email" autocomplete="email" required aria-describedby="e-mail">
-                <p class="err" id="e-mail"></p>
-              </div>
-              <div class="field full">
-                <label for="f-subj">Sujet</label>
-                <input id="f-subj" name="subject" type="text" placeholder="Tableau de bord, application, formation…">
-              </div>
-              <div class="field full">
-                <label for="f-msg">Message</label>
-                <textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea>
-                <p class="err" id="e-msg"></p>
-              </div>
-              <div class="form-foot">
-                <button class="btn btn-solid" type="submit">Préparer l'email</button>
-                <p id="f-note">Le formulaire ouvre votre messagerie avec le message déjà rédigé. Si rien ne s'ouvre, écrivez directement à daoudaboye19@gmail.com.</p>
-              </div>
-            </form>
+          <h2 id="t-contact" class="contact-title">Écrivez-moi.</h2>
+          <p class="contact-lead">Pour un rapport Power BI, un modèle d'aide à la décision, une application métier ou un cours. Dites-moi en quelques lignes ce que vous cherchez à faire, et avec quelles données.</p>
+          <div class="contact-mail">
+            <a class="mail-link" href="mailto:daoudaboye19@gmail.com">daoudaboye19@gmail.com</a>
+            <button type="button" class="btn btn-line" id="copy-mail" data-mail="daoudaboye19@gmail.com">Copier l'adresse</button>
+            <span class="copy-status" id="copy-status" aria-live="polite"></span>
           </div>
+          <ul class="contact-links">
+            <li><a href="https://www.linkedin.com/in/daouda-boye-856222182" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li>Dakar, Sénégal</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -1144,20 +1181,18 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
   document.getElementById('lb-close').addEventListener('click', function(){ lb.close(); });
   lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
 
-  var form = document.getElementById('form');
-  form.addEventListener('submit', function(ev){
-    ev.preventDefault();
-    var name = form.name.value.trim(), mail = form.email.value.trim(), subj = form.subject.value.trim(), msg = form.message.value.trim();
-    var ok = true;
-    function set(id, text){ var e = document.getElementById(id); e.textContent = text; e.previousElementSibling.setAttribute('aria-invalid', text ? 'true' : 'false'); if (text) ok = false; }
-    set('e-name', name ? '' : 'Indiquez votre nom.');
-    set('e-mail', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail) ? '' : 'Indiquez une adresse email valide, par exemple nom@domaine.com.');
-    set('e-msg', msg.length >= 10 ? '' : 'Décrivez votre besoin en quelques mots (10 caractères minimum).');
-    if (!ok){ var first = form.querySelector('.err:not(:empty)'); if (first) first.previousElementSibling.focus(); return; }
-    var body = msg + '\n\n' + name + '\n' + mail;
-    window.location.href = 'mailto:daoudaboye19@gmail.com?subject=' + encodeURIComponent(subj || ('Prise de contact de ' + name)) + '&body=' + encodeURIComponent(body);
-    document.getElementById('f-note').textContent = "Votre messagerie devrait s'ouvrir avec le message prêt à envoyer. Si rien ne s'ouvre, écrivez directement à daoudaboye19@gmail.com.";
-  });
+  // Copier l'adresse email
+  var cbtn = document.getElementById('copy-mail'), cst = document.getElementById('copy-status');
+  if (cbtn){
+    cbtn.addEventListener('click', function(){
+      var mail = cbtn.getAttribute('data-mail');
+      function done(ok){ cst.textContent = ok ? 'Adresse copiée.' : 'Copie impossible : sélectionnez l\'adresse ci-contre.'; setTimeout(function(){ cst.textContent=''; }, 4000); }
+      function fallback(){
+        try { var t=document.createElement('textarea'); t.value=mail; t.setAttribute('readonly',''); t.style.position='absolute'; t.style.left='-9999px'; document.body.appendChild(t); t.select(); var ok=document.execCommand('copy'); document.body.removeChild(t); done(ok); } catch(e){ done(false); }
+      }
+      if (navigator.clipboard && window.isSecureContext){ navigator.clipboard.writeText(mail).then(function(){ done(true); }, fallback); } else { fallback(); }
+    });
+  }
 })();
 </script>
 </body>
