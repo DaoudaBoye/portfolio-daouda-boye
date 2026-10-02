@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daouda Boye, ingénieur en données et intelligence artificielle</title>
+<meta name="description" content="Daouda Boye, ingénieur en données et intelligence artificielle à Dakar. Rapport Power BI sur 75 institutions de microfinance, applications métiers, machine learning, parcours et enseignement.">
+<meta name="author" content="Daouda Boye">
+<meta name="theme-color" content="#EDEEE9">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Daouda Boye, ingénieur en données et IA">
+<meta property="og:description" content="Données, intelligence artificielle et solutions numériques. Projets, méthode, parcours et enseignement.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Daouda Boye, ingénieur en données et intelligence artificielle">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Daouda Boye",
+  "jobTitle": "Ingénieur en données et intelligence artificielle",
+  "email": "mailto:daoudaboye19@gmail.com",
+  "image": "assets/daouda-boye.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Dakar", "addressCountry": "SN" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "École Supérieure Multinationale des Télécommunications (ESMT)" },
+  "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Diplôme d'ingénieur de conception des télécommunications, spécialité ingénierie des données et intelligence artificielle" },
+  "worksFor": { "@type": "Organization", "name": "Technosus" },
+  "sameAs": ["https://www.linkedin.com/in/daouda-boye-856222182"],
+  "knowsAbout": ["Data engineering", "Business intelligence", "Machine learning", "Gouvernance des données", "Power BI", "Python", "SQL"]
+}
+</script>
+<style>
+:root{
+  --paper:#EDEEE9;
+  --paper-2:#E4E6E0;
+  --ink:#1E2A36;
+  --graphite:#55606B;
+  --rule:#C5C9C0;
+  --mark:#E3B23C;
+  --mark-ink:#1E2A36;
+  --focus:#1E2A36;
+  --sans:"IBM Plex Sans", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --cond:"IBM Plex Sans Condensed", "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --gutter:clamp(20px, 4vw, 56px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top, 0px);
+  padding-bottom:env(safe-area-inset-bottom, 0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#151C23; --paper-2:#1C252E; --ink:#E4E7E1; --graphite:#9BA6AF;
+    --rule:#2F3B46; --mark:#E8BC4E; --mark-ink:#151C23; --focus:#E8BC4E; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#151C23; --paper-2:#1C252E; --ink:#E4E7E1; --graphite:#9BA6AF;
+  --rule:#2F3B46; --mark:#E8BC4E; --mark-ink:#151C23; --focus:#E8BC4E; color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top, 0px) + 72px);scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;font-feature-settings:"tnum" 0;text-rendering:optimizeLegibility}
+img,svg{max-width:100%}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{text-decoration-color:var(--mark)}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 12px;z-index:50}
+.skip:focus{left:8px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
+.num{font-variant-numeric:tabular-nums}
+.ph{background:color-mix(in srgb, var(--mark) 28%, transparent);padding:0 .25em;border-radius:2px;font-style:normal}
+
+/* En-tête */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--paper) 92%, transparent);backdrop-filter:saturate(1.2) blur(6px);-webkit-backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:60px}
+.brand{font-family:var(--cond);font-weight:700;font-size:20px;letter-spacing:.01em;text-decoration:none}
+.brand span{color:var(--graphite);font-family:var(--sans);font-weight:400;font-size:14px;margin-left:10px}
+.nav{display:flex;align-items:center;gap:22px;font-size:15px}
+.nav a{text-decoration:none;color:var(--graphite)}
+.nav a:hover{color:var(--ink)}
+.theme{font:inherit;font-size:14px;background:none;border:1px solid var(--rule);color:var(--ink);padding:5px 10px;border-radius:3px;cursor:pointer}
+.theme:hover{border-color:var(--ink)}
+@media (max-width:860px){.nav a{display:none}.nav a[href="#contact"],.nav a[href="#projets"]{display:inline}.brand span{display:none}}
+
+/* Hero */
+.hero{padding:clamp(48px,9vw,120px) 0 40px}
+.hero h1{font-family:var(--cond);font-weight:700;font-size:clamp(64px,13.5vw,196px);line-height:.86;letter-spacing:-.015em;margin:0 0 0 -.04em}
+.hero .tag{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.6vw,34px);line-height:1.25;margin:28px 0 0;max-width:32ch}
+.hero-row{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;margin-top:48px;align-items:start}
+.hero-lead{grid-column:1 / 8;font-size:19px;line-height:1.55;margin:0;max-width:52ch}
+.hero-side{grid-column:9 / 13;font-size:15px;color:var(--graphite)}
+.hero-side p{margin:0 0 4px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;grid-column:1 / 13}
+.btn{display:inline-block;font:inherit;font-size:16px;font-weight:500;padding:12px 20px;border-radius:3px;text-decoration:none;border:1px solid var(--ink);cursor:pointer}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{background:color-mix(in srgb, var(--ink) 86%, var(--mark))}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--paper-2)}
+@media (max-width:860px){.hero-lead,.hero-side{grid-column:1 / -1}}
+
+.hero-top{display:grid;grid-template-columns:minmax(0,1fr) clamp(180px,22vw,280px);gap:clamp(24px,4vw,56px);align-items:end}
+.portrait{margin:0;width:100%}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:saturate(.92);border:1px solid var(--rule)}
+.portrait figcaption{font-size:13px;color:var(--graphite);margin-top:8px}
+@media (max-width:640px){.hero-top{grid-template-columns:1fr}.portrait{max-width:200px;order:-1}}
+
+/* Bande sombre */
+.band{--band-bg:#1E2A36;--band-fg:#EDEEE9;--band-muted:#A9B3BB;--band-rule:#3A4855;background:var(--band-bg);color:var(--band-fg);margin-top:clamp(72px,10vw,128px);padding-bottom:clamp(72px,10vw,120px)}
+:root[data-theme="dark"] .band{--band-bg:#0D1318;--band-rule:#26323C}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .band{--band-bg:#0D1318;--band-rule:#26323C}}
+.band .sec-label{color:var(--band-muted);border-top-color:var(--band-rule)}
+.band .sec-label .n{color:var(--band-fg)}
+.band .sec-body{border-top-color:var(--band-fg)}
+.band .method::before{background:var(--band-fg)}
+.band .method li::after{background:var(--band-bg);border-color:var(--band-fg)}
+.band .method li:last-child::after{background:var(--mark);border-color:var(--mark)}
+.band .method p{color:var(--band-muted)}
+
+/* Capture d'écran de projet */
+.case.shot{grid-template-columns:minmax(0,1fr)}
+.case.shot .intro-row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);align-items:end}
+.case.shot figure{padding:10px 10px 12px}
+.case.shot figure img{display:block;width:100%;height:auto;border:1px solid var(--rule)}
+@media (max-width:860px){.case.shot .intro-row{grid-template-columns:1fr}}
+
+/* Fig. 1 la chaîne */
+.chain{margin:clamp(56px,8vw,96px) 0 0;border-top:1px solid var(--ink);padding-top:22px}
+.chain-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--graphite);margin-bottom:26px}
+.chain-head strong{color:var(--ink);font-weight:500}
+.chain ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);position:relative}
+.chain ol::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--ink);transform-origin:left;transform:scaleX(1)}
+.chain li{position:relative;padding-right:14px;min-width:0}
+.chain button{all:unset;cursor:pointer;display:block;padding-top:30px;width:100%}
+.chain button::before{content:"";position:absolute;top:3px;left:0;width:13px;height:13px;border:1px solid var(--ink);background:var(--paper);border-radius:50%;transition:background .2s}
+.chain button:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+.chain .k{display:block;font-size:13px;color:var(--graphite)}
+.chain .w{display:block;font-family:var(--cond);font-weight:600;font-size:clamp(16px,1.7vw,23px);line-height:1.1;margin-top:2px;overflow-wrap:anywhere}
+.chain li.on button::before,.chain button:hover::before{background:var(--mark);border-color:var(--mark-ink)}
+.readout{margin:26px 0 0;font-family:var(--serif);font-size:19px;min-height:1.6em;max-width:60ch}
+.readout b{font-family:var(--sans);font-weight:500;font-size:15px;margin-right:10px;color:var(--graphite)}
+.js .chain.anim ol::before{animation:draw 1.1s cubic-bezier(.6,.05,.2,1) both}
+.js .chain.anim li{animation:pop .4s ease both}
+.js .chain.anim li:nth-child(1){animation-delay:.15s}.js .chain.anim li:nth-child(2){animation-delay:.3s}.js .chain.anim li:nth-child(3){animation-delay:.45s}
+.js .chain.anim li:nth-child(4){animation-delay:.6s}.js .chain.anim li:nth-child(5){animation-delay:.75s}.js .chain.anim li:nth-child(6){animation-delay:.9s}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (max-width:760px){
+  .chain ol{grid-template-columns:1fr;gap:0}
+  .chain ol::before{top:6px;bottom:6px;left:6px;right:auto;width:1px;height:auto;transform-origin:top}
+  .chain button{padding:6px 0 14px 30px}
+  .chain button::before{top:8px}
+  @keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+}
+
+/* Sections */
+.sec{padding:clamp(72px,10vw,128px) 0 0}
+.sec-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.sec-label{grid-column:1 / 4;font-size:15px;color:var(--graphite);padding-top:10px;border-top:1px solid var(--rule)}
+.sec-label .n{display:block;font-family:var(--cond);font-weight:600;font-size:15px;color:var(--ink)}
+.sec-body{grid-column:4 / 13;border-top:1px solid var(--ink);padding-top:10px}
+.sec h2,.band h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,52px);line-height:1.12;letter-spacing:-.01em;margin:18px 0 0;max-width:20ch}
+.intro{font-size:19px;max-width:62ch;margin:24px 0 0;color:var(--graphite)}
+@media (max-width:860px){.sec-label,.sec-body{grid-column:1 / -1}.sec-label{border-top:0;padding-top:0}}
+
+/* À propos */
+.about{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(24px,5vw,72px);margin-top:40px}
+.about-text p{font-family:var(--serif);font-size:19px;line-height:1.7;margin:0 0 1.1em;max-width:62ch}
+.about-text p:first-child{font-size:22px;line-height:1.55}
+.note{font-size:15px;color:var(--graphite);border-left:2px solid var(--mark);padding:2px 0 2px 16px;align-self:start}
+.note p{margin:0 0 14px}
+.note strong{display:block;color:var(--ink);font-weight:500}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* Expertise */
+.domains{margin:36px 0 0;padding:0;list-style:none}
+.domains li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,4fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.domains li:first-child{border-top:1px solid var(--rule)}
+.domains h3{font-family:var(--cond);font-weight:600;font-size:24px;line-height:1.15;margin:0}
+.domains p{margin:0;max-width:46ch}
+.domains .tools{font-size:15px;color:var(--graphite)}
+@media (max-width:860px){.domains li{grid-template-columns:1fr;gap:6px}}
+
+/* Projets */
+.cases{margin-top:40px}
+.case{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,56px);padding:36px 0 32px;border-bottom:1px solid var(--rule);position:relative}
+.case:first-child{border-top:1px solid var(--rule)}
+.case::before{content:"";position:absolute;left:calc(-1 * var(--gutter) / 2);top:36px;bottom:32px;width:3px;background:var(--mark);transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.case:hover::before,.case:focus-within::before{transform:scaleY(1)}
+.case-sector{font-size:14px;color:var(--graphite);margin:0}
+.case h4{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.15;margin:6px 0 14px}
+.case-problem{font-size:18px;margin:0 0 18px;max-width:54ch}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;margin:0;font-size:15px}
+.facts dt{color:var(--graphite)}
+.facts dd{margin:0}
+.case figure{margin:0;align-self:start;border:1px solid var(--rule);background:var(--paper-2);padding:18px 18px 12px}
+.case figure svg{display:block;width:100%;height:auto;color:var(--ink)}
+.case figcaption{font-size:13px;color:var(--graphite);margin-top:10px}
+.case details{grid-column:1 / -1}
+.case summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:16px;padding:8px 0}
+.case summary::-webkit-details-marker{display:none}
+.case summary .pm{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid var(--ink);border-radius:50%;font-size:15px;line-height:1;transition:transform .2s}
+.case details[open] summary .pm{transform:rotate(45deg)}
+.case summary:hover{text-decoration:underline;text-decoration-color:var(--mark);text-underline-offset:4px}
+.study{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px;padding:20px 0 8px}
+.study h5{font-family:var(--cond);font-weight:600;font-size:18px;margin:0 0 6px}
+.study p,.study ul,.study ol{margin:0;max-width:56ch}
+.study ul,.study ol{padding-left:1.15em}
+.study li{margin-bottom:4px}
+.study .wide{grid-column:1 / -1}
+.limit{font-family:var(--serif);font-style:italic}
+.minor{list-style:none;padding:0;margin:0}
+.minor li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 24px;padding:14px 0;border-top:1px solid var(--rule)}
+.minor li:last-child{border-bottom:1px solid var(--rule)}
+.minor h4{font-size:17px;font-weight:500;margin:0;font-family:var(--sans)}
+.minor span{color:var(--graphite);font-size:15px}
+.minor p{grid-column:1 / -1;margin:0;font-size:16px;max-width:64ch}
+@media (max-width:860px){.case{grid-template-columns:1fr}.study{grid-template-columns:1fr}.case::before{display:none}}
+
+/* Méthode */
+.method{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
+.method::before{content:"";position:absolute;left:0;right:0;top:34px;height:1px;background:var(--ink)}
+.method li{position:relative;padding-right:18px}
+.method .st{font-family:var(--cond);font-weight:700;font-size:28px;line-height:1;display:block;margin-bottom:22px;font-variant-numeric:tabular-nums}
+.method li::after{content:"";position:absolute;top:29px;left:0;width:11px;height:11px;background:var(--paper);border:1px solid var(--ink);transform:rotate(45deg)}
+.method li:last-child::after{background:var(--mark);border-color:var(--mark-ink)}
+.method h3{font-family:var(--serif);font-weight:500;font-size:22px;margin:22px 0 6px}
+.method p{margin:0;font-size:16px;color:var(--graphite);max-width:26ch}
+@media (max-width:860px){
+  .method{grid-template-columns:1fr;margin-top:32px}
+  .method::before{top:0;bottom:0;left:5px;right:auto;width:1px;height:auto}
+  .method li{padding:0 0 26px 36px}
+  .method li::after{top:8px;left:0}
+  .method .st{font-size:20px;margin-bottom:0}
+  .method h3{margin-top:4px}
+  .method p{max-width:none}
+}
+
+/* Parcours */
+.ledger{list-style:none;margin:36px 0 0;padding:0}
+.ledger > li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;padding:24px 0;border-bottom:1px solid var(--rule)}
+.ledger > li:first-child{border-top:1px solid var(--rule)}
+.ledger time,.ledger .when{font-size:15px;color:var(--graphite);font-variant-numeric:tabular-nums;padding-top:3px}
+.ledger h3{font-family:var(--cond);font-weight:600;font-size:22px;line-height:1.2;margin:0}
+.ledger .org{margin:2px 0 10px;color:var(--graphite);font-size:16px}
+.ledger ul{margin:0;padding-left:1.15em;max-width:64ch}
+.ledger li li{margin-bottom:3px}
+.ledger .now{display:inline-block;font-size:12px;font-weight:500;padding:1px 7px;margin-left:8px;border-radius:2px;background:var(--mark);color:var(--mark-ink);vertical-align:3px}
+.edu{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:24px;margin-top:48px}
+.edu h3{font-family:var(--serif);font-weight:400;font-size:24px;margin:0}
+.edu dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 24px}
+.edu dt{font-size:15px;color:var(--graphite);font-variant-numeric:tabular-nums;padding-top:2px}
+.edu dd{margin:0}
+@media (max-width:860px){.ledger > li,.edu{grid-template-columns:1fr;gap:6px}.edu dl{grid-template-columns:1fr;gap:2px}.edu dd{margin-bottom:10px}}
+
+/* Enseignement */
+.teach{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);margin-top:36px}
+.teach blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.35}
+.teach blockquote::before{content:"";display:block;width:48px;height:3px;background:var(--mark);margin-bottom:20px}
+.schools{margin:0 0 24px;padding:0;list-style:none}
+.schools li{padding:12px 0;border-bottom:1px solid var(--rule)}
+.schools b{font-weight:500;display:block}
+.schools span{font-size:15px;color:var(--graphite)}
+.subjects{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.subjects li{border:1px solid var(--rule);padding:4px 10px;font-size:15px;border-radius:2px}
+@media (max-width:860px){.teach{grid-template-columns:1fr}}
+
+/* Stack */
+.spec{margin:36px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.spec div{padding:20px 20px 22px 0}
+.spec div + div{border-left:1px solid var(--rule);padding-left:20px}
+.spec dt{font-family:var(--cond);font-weight:700;font-size:15px;margin-bottom:10px;color:var(--graphite)}
+.spec dd{margin:0;font-size:17px;line-height:1.75}
+@media (max-width:860px){.spec{grid-template-columns:repeat(2,minmax(0,1fr))}.spec div:nth-child(3){border-left:0;padding-left:0}.spec div:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media (max-width:480px){.spec{grid-template-columns:1fr}.spec div + div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
+
+/* Contact */
+.contact{padding:clamp(80px,11vw,140px) 0 clamp(56px,7vw,96px)}
+.contact .qs{font-family:var(--serif);font-size:clamp(26px,3.4vw,44px);line-height:1.25;margin:20px 0 0;max-width:22ch}
+.contact .qs span{display:block}
+.contact .go{font-family:var(--cond);font-weight:700;font-size:clamp(56px,10vw,140px);line-height:.9;margin:24px 0 0;letter-spacing:-.01em}
+.contact-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px);margin-top:56px}
+.direct p{margin:0 0 18px}
+.direct small{display:block;font-size:14px;color:var(--graphite)}
+.direct a{font-size:19px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1 / -1}
+label{font-size:15px;color:var(--graphite)}
+input,textarea{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);padding:8px 0;border-radius:0}
+textarea{min-height:140px;resize:vertical;border:1px solid var(--ink);padding:10px 12px}
+input:focus,textarea:focus{outline:none;border-color:var(--mark);box-shadow:0 1px 0 0 var(--mark)}
+textarea:focus{box-shadow:0 0 0 1px var(--mark)}
+.err{font-size:14px;color:var(--ink);min-height:1.2em;margin:0}
+.err:not(:empty)::before{content:"";display:inline-block;width:8px;height:8px;background:var(--mark);margin-right:8px}
+.form-foot{grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.form-foot p{margin:0;font-size:14px;color:var(--graphite);max-width:46ch}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--rule);padding:24px 0 32px;font-size:14px;color:var(--graphite)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* Apparition légère */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .js .chain.anim ol::before,.js .chain.anim li{animation:none}
+  .case::before,.case summary .pm{transition:none}
+}
+@media print{.top,.theme,form,.chain .readout{display:none}}
+
+/* Ajouts v2 */
+.hero .role{font-family:var(--sans);font-weight:500;font-size:clamp(19px,2.1vw,27px);line-height:1.3;margin:22px 0 0;max-width:30ch}
+.hero .tag{margin-top:10px;color:var(--graphite)}
+.hero h1{margin-bottom:0}
+.offer{grid-column:1 / 13;margin:18px 0 0;font-size:15px;color:var(--graphite);max-width:70ch}
+.offer a{color:var(--ink)}
+.portrait picture,.portrait img{display:block;width:100%;height:auto}
+.portrait img{aspect-ratio:4/5;object-fit:cover;filter:saturate(.92);border:1px solid var(--rule)}
+.group{font-family:var(--cond);font-weight:600;font-size:20px;margin:56px 0 0;padding-bottom:10px;border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.group small{font-family:var(--sans);font-weight:400;font-size:14px;color:var(--graphite)}
+.pindex{list-style:none;margin:0;padding:0}
+.pindex li{border-bottom:1px solid var(--rule)}
+.pindex a{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,4fr) minmax(0,3fr);gap:16px;padding:12px 0;text-decoration:none}
+.pindex a:hover b,.pindex a:focus-visible b{text-decoration:underline;text-decoration-color:var(--mark);text-underline-offset:4px}
+.pindex b{font-weight:500}
+.pindex span{color:var(--graphite);font-size:15px}
+@media (max-width:640px){.pindex a{grid-template-columns:1fr;gap:0}}
+.cases{margin-top:8px}
+.case:first-child{border-top:0}
+.feat{margin:0;padding-left:1.15em;max-width:60ch}
+.feat li{margin-bottom:4px}
+.case.shot .feat{margin-top:0;columns:2;column-gap:40px;max-width:none}
+.case.shot .feat li{break-inside:avoid}
+@media (max-width:860px){.case.shot .feat{columns:1}}
+.case .note-pub{font-size:15px;color:var(--graphite);margin:0}
+.kind{display:inline-block;font-family:var(--sans);font-size:12px;font-weight:500;padding:1px 7px;margin-left:8px;border:1px solid var(--graphite);color:var(--graphite);border-radius:2px;vertical-align:3px;white-space:nowrap}
+.ledger .now{background:transparent;color:var(--ink);border:1px solid var(--mark);box-shadow:inset 3px 0 0 var(--mark);padding-left:9px}
+.method-lead{font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.5;max-width:52ch;margin:24px 0 0}
+.band .method-lead{color:var(--band-fg)}
+.reasons{list-style:none;margin:0 0 8px;padding:0}
+.reasons li{padding:10px 0;border-bottom:1px solid var(--rule)}
+.reasons li:first-child{border-top:1px solid var(--rule)}
+.reasons b{font-weight:500;display:block}
+.reasons span{font-size:15px;color:var(--graphite)}
+.stackline{margin:28px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.stackline div{padding:16px 16px 18px 0}
+.stackline div + div{border-left:1px solid var(--rule);padding-left:16px}
+.stackline dt{font-family:var(--cond);font-weight:700;font-size:15px;color:var(--graphite);margin-bottom:4px}
+.stackline dd{margin:0}
+@media (max-width:860px){.stackline{grid-template-columns:repeat(2,minmax(0,1fr))}.stackline div:nth-child(3){border-left:0;padding-left:0}.stackline div:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media (max-width:480px){.stackline{grid-template-columns:1fr}.stackline div + div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
+
+.sr-h{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.hero .role{max-width:44ch}
+.brand,.theme,.nav a{white-space:nowrap}
+@media (max-width:640px){.nav{gap:14px}.portrait{max-width:140px}.hero{padding-top:36px}}
+@media (max-width:420px){.nav a[href="#projets"]{display:none}}
+@media (max-width:360px){.brand{font-size:18px}.nav a[href="#contact"]{display:none}}
+
+/* Galeries de captures */
+.gallery{margin:0;border:1px solid var(--rule);background:var(--paper-2);padding:10px 10px 12px}
+.zoom{all:unset;display:block;width:100%;cursor:zoom-in;box-sizing:border-box}
+.zoom:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+.zoom img{display:block;width:100%;height:auto;border:1px solid var(--rule);transition:border-color .2s}
+.zoom:hover img{border-color:var(--ink)}
+.thumbs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.thumbs .cap{display:block;font-size:13px;margin-top:6px}
+.gallery figcaption{font-size:13px;color:var(--graphite);margin-top:10px}
+@media (max-width:480px){.thumbs{grid-template-columns:1fr}}
+dialog.lb{border:0;padding:0;background:var(--paper);color:var(--ink);max-width:min(1400px,96vw);max-height:94vh;width:auto}
+dialog.lb::backdrop{background:rgba(15,20,26,.82)}
+dialog.lb img{display:block;max-width:100%;max-height:calc(94vh - 56px);width:auto;height:auto;margin:0 auto}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 14px;font-size:14px;color:var(--graphite)}
+.lb-bar button{font:inherit;font-size:14px;background:none;border:1px solid var(--rule);color:var(--ink);padding:5px 12px;border-radius:3px;cursor:pointer}
+@media (prefers-reduced-motion: reduce){.zoom img{transition:none}}
+
+/* Tableau des résultats */
+.metrics-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.metrics{border-collapse:collapse;width:100%;min-width:520px;font-size:15px;font-variant-numeric:tabular-nums}
+.metrics caption{text-align:left;font-size:14px;color:var(--graphite);padding-bottom:10px;caption-side:top}
+.metrics th,.metrics td{padding:9px 12px;text-align:right;border-bottom:1px solid var(--rule)}
+.metrics thead th{font-weight:500;border-bottom:1px solid var(--ink);vertical-align:bottom}
+.metrics th[scope="row"],.metrics thead th:first-child{text-align:left;font-weight:400;color:var(--graphite)}
+.metrics .best{font-weight:600;background:color-mix(in srgb, var(--mark) 16%, transparent)}
+.metrics thead .best{box-shadow:inset 0 3px 0 var(--mark)}
+
+/* Transitions liées aux actions du visiteur */
+.study{overflow:hidden}
+dialog.lb[open]{animation:lb-in .2s ease-out}
+dialog.lb[open]::backdrop{animation:lb-fade .2s ease-out}
+@keyframes lb-in{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+@keyframes lb-fade{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion: reduce){dialog.lb[open],dialog.lb[open]::backdrop{animation:none}}
+.thumbs .zoom img{aspect-ratio:16/8;object-fit:cover;object-position:top left}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenu">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#haut">Daouda Boye<span>Données et IA</span></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#projets">Projets</a>
+      <a href="#methode">Méthode</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#enseignement">Formation</a>
+      <a href="#contact">Contact</a>
+      <button class="theme" type="button" id="theme" aria-label="Changer de thème">Thème sombre</button>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+  <section class="hero" id="haut" aria-labelledby="nom">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <h1 id="nom">Daouda<br>Boye</h1>
+          <p class="role">Ingénieur en données et intelligence artificielle</p>
+          <p class="tag">Données. Intelligence artificielle. Solutions numériques.</p>
+        </div>
+        <figure class="portrait">
+          <picture>
+            <source srcset="assets/daouda-boye.avif" type="image/avif">
+            <source srcset="assets/daouda-boye.webp" type="image/webp">
+            <img src="assets/daouda-boye.jpg" width="480" height="600" fetchpriority="high" alt="Portrait de Daouda Boye en costume bleu marine et cravate bordeaux">
+          </picture>
+          <figcaption>Dakar, Sénégal</figcaption>
+        </figure>
+      </div>
+      <div class="hero-row">
+        <p class="hero-lead">Je pars d'un problème métier, j'organise les données qui l'entourent et je construis l'outil qui aide à décider : tableau de bord, modèle de machine learning, automatisation ou application.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" href="#projets">Voir les projets</a>
+          <a class="btn btn-line" href="#contact">Me contacter</a>
+        </div>
+        <p class="offer">Je peux intervenir sur des projets data et BI, de l'IA appliquée, des applications métiers, en mission ou en collaboration, ainsi qu'en formation.</p>
+      </div>
+
+      <figure class="chain" id="chain" aria-labelledby="chain-cap">
+        <div class="chain-head">
+          <span id="chain-cap"><strong>Fig. 1</strong> La chaîne sur laquelle je travaille, du problème à la décision</span>
+          <span>Sélectionnez une étape</span>
+        </div>
+        <ol>
+          <li><button type="button" data-t="Ce qu'il faut décider, pour qui, et à quelle fréquence."><span class="k num">a</span><span class="w">Problème</span></button></li>
+          <li><button type="button" data-t="Ce qui existe déjà, où cela se trouve, et dans quel état."><span class="k num">b</span><span class="w">Données</span></button></li>
+          <li><button type="button" data-t="Ce que les données montrent réellement, et ce qu'elles ne permettent pas de dire."><span class="k num">c</span><span class="w">Analyse</span></button></li>
+          <li><button type="button" data-t="L'outil le plus simple qui répond au besoin : rapport, modèle ou application."><span class="k num">d</span><span class="w">Solution</span></button></li>
+          <li><button type="button" data-t="Ce qui peut tourner sans intervention manuelle, et les contrôles qui l'accompagnent."><span class="k num">e</span><span class="w">Automatisation</span></button></li>
+          <li><button type="button" data-t="Une information fiable, disponible au moment où quelqu'un doit trancher."><span class="k num">f</span><span class="w">Décision</span></button></li>
+        </ol>
+        <p class="readout" id="readout" aria-live="polite"><b>a</b>Ce qu'il faut décider, pour qui, et à quelle fréquence.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 1. PROJETS -->
+  <section class="sec" id="projets" aria-labelledby="t-projets">
+    <div class="wrap sec-grid">
+      <div class="sec-label"><span class="n num">1</span>Projets</div>
+      <div class="sec-body">
+        <h2 id="t-projets">Ce que j'ai construit.</h2>
+        <p class="intro">Quatre projets représentatifs de mon travail, entre données, intelligence artificielle et applications. Les captures s'agrandissent au clic, et le détail de chaque projet s'ouvre sous sa présentation.</p>
+
+        <h3 class="group">Projets principaux <small>4 projets</small></h3>
+        <ol class="pindex" aria-label="Sommaire des projets principaux">
+          <li><a href="#projet-imf"><b>Analyse des besoins de 75 IMF</b><span>Business intelligence, microfinance</span><span>Captures du rapport Power BI</span></a></li>
+          <li><a href="#projet-dalal-diamm"><b>Dalal Diamm Services</b><span>Application métier, mobile money</span><span>Captures d'interface</span></a></li>
+          <li><a href="#projet-solvabilite"><b>Prédiction de la solvabilité</b><span>Machine learning, mémoire d'ingénieur</span><span>Captures et résultats des modèles</span></a></li>
+          <li><a href="#projet-xamio"><b>XAMIO</b><span>Produit SaaS, Technosus</span><span>Captures d'interface</span></a></li>
+        </ol>
+
+        <div class="cases">
+          <!-- Pour ajouter un projet : copier un bloc <article class="case"> et l'ajouter au sommaire ci-dessus. -->
+
+          <article class="case shot" id="projet-imf" aria-labelledby="t-imf">
+            <div class="intro-row">
+              <div>
+                <p class="case-sector">Business intelligence, microfinance</p>
+                <h4 id="t-imf">Analyse des besoins de 75 institutions de microfinance</h4>
+                <p class="case-problem">Un rapport Power BI interactif qui restitue les résultats d'une enquête menée auprès de 75 institutions de microfinance (IMF) au Sénégal : profil des institutions, digitalisation, financement et cadre réglementaire.</p>
+              </div>
+              <dl class="facts">
+                <dt>Périmètre</dt><dd>75 IMF, 121 agences</dd>
+                <dt>Outil</dt><dd>Power BI</dd>
+              </dl>
+            </div>
+            <figure class="gallery">
+              <button type="button" class="zoom" data-full="assets/imf-information-1400.webp" data-alt="Page Information IMF du rapport Power BI : secteurs d'intervention prioritaires, répartition des membres entre hommes, femmes et personnes morales, affiliation à un réseau, services non financiers et liste des IMF avec leur agrément" aria-label="Agrandir la capture : page Information IMF"><picture><source type="image/avif" srcset="assets/imf-information-800.avif 800w, assets/imf-information-1400.avif 1143w" sizes="(max-width: 860px) 92vw, 780px"><source type="image/webp" srcset="assets/imf-information-800.webp 800w, assets/imf-information-1400.webp 1143w" sizes="(max-width: 860px) 92vw, 780px"><img src="assets/imf-information-1400.jpg" width="1143" height="644" loading="lazy" decoding="async" alt="Page Information IMF du rapport Power BI : secteurs d'intervention prioritaires, répartition des membres entre hommes, femmes et personnes morales, affiliation à un réseau, services non financiers et liste des IMF avec leur agrément"></picture></button>
+              <div class="thumbs"><div><button type="button" class="zoom" data-full="assets/imf-digital-1400.webp" data-alt="Page IT et digital du rapport : besoins en équipement par IMF, intentions d'acquisition de solutions digitales, facteurs limitant la digitalisation et systèmes d'information utilisés" aria-label="Agrandir la capture : page IT et digital"><picture><source type="image/avif" srcset="assets/imf-digital-800.avif 800w, assets/imf-digital-1400.avif 1150w" sizes="(max-width: 860px) 46vw, 380px"><source type="image/webp" srcset="assets/imf-digital-800.webp 800w, assets/imf-digital-1400.webp 1150w" sizes="(max-width: 860px) 46vw, 380px"><img src="assets/imf-digital-1400.jpg" width="1150" height="651" loading="lazy" decoding="async" alt="Page IT et digital du rapport : besoins en équipement par IMF, intentions d'acquisition de solutions digitales, facteurs limitant la digitalisation et systèmes d'information utilisés"></picture></button><span class="cap">Systèmes d'information et digitalisation</span></div></div>
+              <figcaption>Deux des six pages du rapport. Cliquez sur une capture pour l'agrandir.</figcaption>
+            </figure>
+            <details>
+              <summary><span class="pm" aria-hidden="true">+</span>Lire l'étude de cas</summary>
+              <div class="study">
+                <div><h5>Problème</h5><p>Rendre lisibles et exploitables les réponses d'une enquête auprès de 75 institutions, pour comprendre leurs besoins et orienter l'appui qui leur est apporté.</p></div>
+                <div><h5>Réalisation</h5><p>Un rapport de six pages : accueil et cartographie, informations générales sur les IMF, systèmes d'information et digitalisation, financement, nouvelle loi, et PACTIFU.</p></div>
+                <div class="wide"><h5>Ce que le rapport permet</h5>
+                  <ul>
+                    <li>Filtrer l'ensemble des résultats par région, département, commune ou institution.</li>
+                    <li>Ouvrir la fiche signalétique de chaque IMF à partir d'une simple sélection.</li>
+                    <li>Suivre les indicateurs clés : nombre d'IMF, d'agences, de membres et de membres actifs.</li>
+                    <li>Analyser le profil des institutions : secteurs d'intervention, composition des membres, affiliation à un réseau, services non financiers.</li>
+                    <li>Mesurer les besoins en digitalisation : équipements, solutions envisagées, freins et systèmes d'information en place.</li>
+                  </ul>
+                </div>
+                <div class="wide"><h5>Confidentialité</h5><p>Les fiches signalétiques contiennent les coordonnées des institutions et de leurs dirigeants. Elles ne sont pas reproduites ici.</p></div>
+              </div>
+            </details>
+          </article>
+
+          <article class="case shot" id="projet-dalal-diamm" aria-labelledby="t-dalal">
+            <div class="intro-row">
+              <div>
+                <p class="case-sector">Application métier, mobile money et microfinance</p>
+                <h4 id="t-dalal">Dalal Diamm Services</h4>
+                <p class="case-problem">Une application de gestion d'un réseau de caisses : liquidités, comptes mobile money, épargne, prêts, comptage des caisses et clôtures journalières.</p>
+              </div>
+              <dl class="facts">
+                <dt>Domaine</dt><dd>Gestion de réseau, mobile money</dd>
+                <dt>Utilisateurs</dt><dd>Administrateurs et superviseurs</dd>
+              </dl>
+            </div>
+            <figure class="gallery">
+              <button type="button" class="zoom" data-full="assets/dalal-diamm-tableau-de-bord-1400.webp" data-alt="Tableau de bord réseau de Dalal Diamm Services : patrimoine du réseau, variation depuis la veille, et composition entre comptes mobile money, liquidité des caisses, solde des entités, prêts en cours et épargne due aux clients" aria-label="Agrandir la capture : tableau de bord réseau"><picture><source type="image/avif" srcset="assets/dalal-diamm-tableau-de-bord-800.avif 800w, assets/dalal-diamm-tableau-de-bord-1400.avif 1400w" sizes="(max-width: 860px) 92vw, 780px"><source type="image/webp" srcset="assets/dalal-diamm-tableau-de-bord-800.webp 800w, assets/dalal-diamm-tableau-de-bord-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 780px"><img src="assets/dalal-diamm-tableau-de-bord-1400.jpg" width="1400" height="616" loading="lazy" decoding="async" alt="Tableau de bord réseau de Dalal Diamm Services : patrimoine du réseau, variation depuis la veille, et composition entre comptes mobile money, liquidité des caisses, solde des entités, prêts en cours et épargne due aux clients"></picture></button>
+              <div class="thumbs"><div><button type="button" class="zoom" data-full="assets/dalal-diamm-caisses-1400.webp" data-alt="Écran Caisses du réseau : une entité avec son superviseur, ses services mobile money et son solde, puis chaque caisse avec sa liquidité et son statut de comptage, dont un écart signalé" aria-label="Agrandir la capture : caisses du réseau"><picture><source type="image/avif" srcset="assets/dalal-diamm-caisses-800.avif 800w, assets/dalal-diamm-caisses-1400.avif 1400w" sizes="(max-width: 860px) 46vw, 380px"><source type="image/webp" srcset="assets/dalal-diamm-caisses-800.webp 800w, assets/dalal-diamm-caisses-1400.webp 1400w" sizes="(max-width: 860px) 46vw, 380px"><img src="assets/dalal-diamm-caisses-1400.jpg" width="1400" height="611" loading="lazy" decoding="async" alt="Écran Caisses du réseau : une entité avec son superviseur, ses services mobile money et son solde, puis chaque caisse avec sa liquidité et son statut de comptage, dont un écart signalé"></picture></button><span class="cap">Comptage des caisses et écarts du jour</span></div></div>
+              <figcaption>Cliquez sur une capture pour l'agrandir.</figcaption>
+            </figure>
+            <div>
+              <h5 class="sr-h">Ce que permet l'application</h5>
+              <ul class="feat">
+                <li>Suivre le patrimoine du réseau, sa variation depuis la veille et sa composition par type d'actif.</li>
+                <li>Compter chaque caisse, signaler les écarts du jour et relever les comptes mobile money.</li>
+                <li>Contrôler les clôtures journalières de chaque entité et consulter l'historique des bilans.</li>
+                <li>Gérer les entités, les services proposés (Wave, Orange Money, Intouch…) et leurs superviseurs.</li>
+                <li>Suivre l'épargne des clients, les prêts en cours, les unités de valeur et les transferts.</li>
+                <li>Recevoir les alertes du réseau, exporter les bilans et tracer les actions dans un journal d'audit.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="case shot" id="projet-solvabilite" aria-labelledby="t-solva">
+            <div class="intro-row">
+              <div>
+                <p class="case-sector">Machine learning, microfinance</p>
+                <h4 id="t-solva">Plateforme de prédiction de la solvabilité</h4>
+                <p class="case-problem">Mon mémoire d'ingénieur : une plateforme web qui estime la solvabilité d'un demandeur de crédit à l'aide d'un modèle de machine learning, client par client ou pour un fichier entier.</p>
+              </div>
+              <dl class="facts">
+                <dt>Cadre</dt><dd>Mémoire d'ingénieur, ESMT, réalisé au FIMF, 2024</dd>
+                <dt>Outils</dt><dd>Python, Scikit-learn, Flask, Laravel</dd>
+              </dl>
+            </div>
+            <figure class="gallery">
+              <button type="button" class="zoom" data-full="assets/solva-prediction-lot-1400.webp" data-alt="Résultat d'une prédiction par lot : cinq clients avec leurs variables et la prédiction solvable ou non solvable pour chacun, avec export en PDF" aria-label="Agrandir la capture : prédiction par lot"><picture><source type="image/avif" srcset="assets/solva-prediction-lot-800.avif 800w, assets/solva-prediction-lot-1400.avif 1366w" sizes="(max-width: 860px) 92vw, 780px"><source type="image/webp" srcset="assets/solva-prediction-lot-800.webp 800w, assets/solva-prediction-lot-1400.webp 1366w" sizes="(max-width: 860px) 92vw, 780px"><img src="assets/solva-prediction-lot-1400.jpg" width="1366" height="605" loading="lazy" decoding="async" alt="Résultat d'une prédiction par lot : cinq clients avec leurs variables et la prédiction solvable ou non solvable pour chacun, avec export en PDF"></picture></button>
+              <div class="thumbs"><div><button type="button" class="zoom" data-full="assets/solva-resultat-1400.webp" data-alt="Résultat d'une prédiction individuelle : le client est solvable, avec un bouton pour télécharger le rapport" aria-label="Agrandir la capture : prédiction individuelle"><picture><source type="image/avif" srcset="assets/solva-resultat-800.avif 800w, assets/solva-resultat-1400.avif 1366w" sizes="(max-width: 860px) 46vw, 380px"><source type="image/webp" srcset="assets/solva-resultat-800.webp 800w, assets/solva-resultat-1400.webp 1366w" sizes="(max-width: 860px) 46vw, 380px"><img src="assets/solva-resultat-1400.jpg" width="1366" height="604" loading="lazy" decoding="async" alt="Résultat d'une prédiction individuelle : le client est solvable, avec un bouton pour télécharger le rapport"></picture></button><span class="cap">Prédiction individuelle et rapport</span></div><div><button type="button" class="zoom" data-full="assets/solva-tableau-de-bord-1400.webp" data-alt="Tableau de bord de la plateforme Solvability : 614 demandes, 422 acceptées, 192 refusées, et répartition des demandes par zone, par genre, par historique de crédit et par niveau d'éducation" aria-label="Agrandir la capture : tableau de bord de la plateforme"><picture><source type="image/avif" srcset="assets/solva-tableau-de-bord-800.avif 800w, assets/solva-tableau-de-bord-1400.avif 1351w" sizes="(max-width: 860px) 46vw, 380px"><source type="image/webp" srcset="assets/solva-tableau-de-bord-800.webp 800w, assets/solva-tableau-de-bord-1400.webp 1351w" sizes="(max-width: 860px) 46vw, 380px"><img src="assets/solva-tableau-de-bord-1400.jpg" width="1351" height="810" loading="lazy" decoding="async" alt="Tableau de bord de la plateforme Solvability : 614 demandes, 422 acceptées, 192 refusées, et répartition des demandes par zone, par genre, par historique de crédit et par niveau d'éducation"></picture></button><span class="cap">Tableau de bord des demandes</span></div></div>
+              <figcaption>Captures de la plateforme, tirées du mémoire. En grand : une prédiction par lot à partir d'un fichier de clients. Cliquez pour agrandir.</figcaption>
+            </figure>
+            <div class="metrics-wrap">
+              <table class="metrics">
+                <caption>Comparaison des quatre modèles sur le jeu de test (30 % des données). La colonne marquée est le modèle retenu, avant sélection des variables.</caption>
+                <thead><tr><th scope="col">Mesure</th><th scope="col">KNN</th><th scope="col" class="best">Régression logistique</th><th scope="col">SVM</th><th scope="col">AdaBoost</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Exactitude</th><td>0,768</td><td class="best">0,832</td><td>0,822</td><td>0,816</td></tr>
+                  <tr><th scope="row">Précision</th><td>0,810</td><td class="best">0,820</td><td>0,814</td><td>0,829</td></tr>
+                  <tr><th scope="row">Rappel</th><td>0,888</td><td class="best">0,985</td><td>0,978</td><td>0,940</td></tr>
+                  <tr><th scope="row">F1-score</th><td>0,847</td><td class="best">0,895</td><td>0,888</td><td>0,881</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <details>
+              <summary><span class="pm" aria-hidden="true">+</span>Lire l'étude de cas</summary>
+              <div class="study">
+                <div><h5>Problème</h5><p>Au Sénégal, une grande partie des emprunteurs travaille dans l'économie informelle, sans revenus réguliers ni documents financiers. Les institutions de microfinance manquent alors d'informations pour évaluer leur solvabilité, ce qui limite l'accès au crédit des indépendants et des PME.</p></div>
+                <div><h5>Données</h5><p>Jeu de données public « Loan Status Prediction » (Kaggle) : 614 demandes de prêt et 13 variables (revenus, montant et durée du prêt, historique de crédit, situation familiale…). La variable cible indique si le prêt a été accordé.</p></div>
+                <div class="wide"><h5>Démarche</h5>
+                  <ol>
+                    <li>Exploration : distributions, valeurs manquantes, valeurs aberrantes et déséquilibres entre classes.</li>
+                    <li>Préparation : imputation par le mode ou la médiane, encodage des variables catégorielles, séparation 70 % entraînement et 30 % test.</li>
+                    <li>Comparaison de quatre modèles : KNN, régression logistique, SVM et AdaBoost. La régression logistique obtient la meilleure exactitude et le meilleur F1-score.</li>
+                    <li>Optimisation : la recherche d'hyperparamètres (GridSearchCV) et le rééquilibrage des classes (SMOTE) n'ont pas amélioré le modèle. La sélection de variables par test du khi-deux en a retenu cinq : situation matrimoniale, revenu de l'emprunteur, revenu du co-emprunteur, montant du prêt et historique de crédit. Le modèle atteint alors 85 % d'exactitude et classe mieux les demandes refusées.</li>
+                  </ol>
+                </div>
+                <div class="wide"><h5>Plateforme</h5><p>Le modèle et sa normalisation sont sérialisés, puis servis par une API Flask. Un backend Laravel gère les utilisateurs, avec authentification et chiffrement des mots de passe. L'interface propose un tableau de bord des demandes, une prédiction individuelle par formulaire avec un rapport PDF téléchargeable, et une prédiction par lot à partir d'un fichier.</p></div>
+                <div><h5>Résultats</h5><p>Ces résultats sont expérimentaux : ils ont été obtenus sur un jeu de données public, et non sur des données d'institutions sénégalaises.</p></div>
+                <div><h5>Limites</h5><p class="limit">Le modèle constitue un outil d'aide à la décision. Il ne remplace ni l'analyse du dossier ni le jugement du professionnel. Il apprend à partir de décisions de prêt passées, et les demandes refusées, minoritaires, restent les plus difficiles à prédire.</p></div>
+              </div>
+            </details>
+          </article>
+
+          <article class="case shot" id="projet-xamio" aria-labelledby="t-xamio">
+            <div class="intro-row">
+              <div>
+                <p class="case-sector">Produit SaaS, Technosus</p>
+                <h4 id="t-xamio">XAMIO</h4>
+                <p class="case-problem">Un outil qui centralise les réunions, les tâches, les documents, les rendez-vous et les ateliers d'une entreprise, pensé pour les entreprises africaines. Son nom vient du wolof « xam », savoir.</p>
+              </div>
+              <dl class="facts">
+                <dt>Cadre</dt><dd>Technosus, que je dirige</dd>
+                <dt>Outils</dt><dd>React, Laravel, PostgreSQL</dd>
+              </dl>
+            </div>
+            <figure class="gallery">
+              <button type="button" class="zoom" data-full="assets/xamio-tableau-de-bord-1400.webp" data-alt="Tableau de bord de XAMIO : rendez-vous à confirmer, notifications, réunions à venir, tâches en cours, prochaines réunions et avancement global des tâches" aria-label="Agrandir la capture : tableau de bord"><picture><source type="image/avif" srcset="assets/xamio-tableau-de-bord-800.avif 800w, assets/xamio-tableau-de-bord-1400.avif 1310w" sizes="(max-width: 860px) 92vw, 780px"><source type="image/webp" srcset="assets/xamio-tableau-de-bord-800.webp 800w, assets/xamio-tableau-de-bord-1400.webp 1310w" sizes="(max-width: 860px) 92vw, 780px"><img src="assets/xamio-tableau-de-bord-1400.jpg" width="1310" height="652" loading="lazy" decoding="async" alt="Tableau de bord de XAMIO : rendez-vous à confirmer, notifications, réunions à venir, tâches en cours, prochaines réunions et avancement global des tâches"></picture></button>
+              <div class="thumbs"><div><button type="button" class="zoom" data-full="assets/xamio-taches-1400.webp" data-alt="Tableau kanban des tâches de XAMIO avec les colonnes à faire, en cours et terminé, chaque tâche ayant une priorité, un responsable et une échéance" aria-label="Agrandir la capture : tâches en kanban"><picture><source type="image/avif" srcset="assets/xamio-taches-800.avif 800w, assets/xamio-taches-1400.avif 1400w" sizes="(max-width: 860px) 46vw, 380px"><source type="image/webp" srcset="assets/xamio-taches-800.webp 800w, assets/xamio-taches-1400.webp 1400w" sizes="(max-width: 860px) 46vw, 380px"><img src="assets/xamio-taches-1400.jpg" width="1400" height="640" loading="lazy" decoding="async" alt="Tableau kanban des tâches de XAMIO avec les colonnes à faire, en cours et terminé, chaque tâche ayant une priorité, un responsable et une échéance"></picture></button><span class="cap">Tâches en kanban</span></div><div><button type="button" class="zoom" data-full="assets/xamio-agenda-1400.webp" data-alt="Agenda directeur privé de XAMIO : calendrier mensuel avec des événements classés par catégorie, confidentiel, stratégique, personnel et réunion" aria-label="Agrandir la capture : agenda directeur"><picture><source type="image/avif" srcset="assets/xamio-agenda-800.avif 800w, assets/xamio-agenda-1400.avif 1400w" sizes="(max-width: 860px) 46vw, 380px"><source type="image/webp" srcset="assets/xamio-agenda-800.webp 800w, assets/xamio-agenda-1400.webp 1400w" sizes="(max-width: 860px) 46vw, 380px"><img src="assets/xamio-agenda-1400.jpg" width="1400" height="625" loading="lazy" decoding="async" alt="Agenda directeur privé de XAMIO : calendrier mensuel avec des événements classés par catégorie, confidentiel, stratégique, personnel et réunion"></picture></button><span class="cap">Agenda directeur privé</span></div></div>
+              <figcaption>Captures de l'application avec des données de démonstration. Cliquez pour agrandir.</figcaption>
+            </figure>
+            <details>
+              <summary><span class="pm" aria-hidden="true">+</span>Lire l'étude de cas</summary>
+              <div class="study">
+                <div><h5>Problème</h5><p>Une réunion produit des décisions et des tâches qui sont ensuite notées ailleurs, ou pas du tout. L'agenda, les documents et les rappels vivent souvent dans des outils séparés.</p></div>
+                <div><h5>Contexte</h5><p>Solution SaaS développée par Technosus, mon activité entrepreneuriale dans les solutions numériques, avec une tarification en FCFA.</p></div>
+                <div class="wide"><h5>Fonctionnalités</h5>
+                  <ul>
+                    <li>Résumés de réunions générés par l'IA.</li>
+                    <li>Kanban de tâches avec priorités, responsables, échéances et rappels SMS.</li>
+                    <li>Planning : calendrier, réunions, rendez-vous et ateliers.</li>
+                    <li>Agenda directeur privé, accessible au directeur et à son assistant.</li>
+                    <li>Documents, événements et notifications.</li>
+                    <li>Rôles distincts (administrateur, directeur, manager) et connexion avec Google ou Microsoft.</li>
+                  </ul>
+                </div>
+                <div class="wide"><h5>Technologies</h5><p>React pour l'interface, Laravel pour l'API et PostgreSQL pour les données.</p></div>
+              </div>
+            </details>
+          </article>
+        </div>
+
+        <h3 class="group">Autres réalisations</h3>
+        <ul class="minor">
+          <li>
+            <h4>Mise en production d'une plateforme de gestion de cartes carburant</h4><span class="num">SenPay, 2026</span>
+            <p>Déploiement d'une application Angular et Spring Boot conteneurisée avec Docker (MySQL, Redis), migrations de schéma avec sauvegardes préalables et intégration de fournisseurs SMS avec basculement.</p>
+          </li>
+          <li>
+            <h4>Application de gestion de bases de données</h4><span class="num">FIMF, 2023–2024</span>
+            <p>Conception et développement d'une application interne de gestion de bases de données, en lien avec l'équipe de développement.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. EXPERTISE -->
+  <section class="sec" id="expertise" aria-labelledby="t-expertise">
+    <div class="wrap sec-grid">
+      <div class="sec-label"><span class="n num">2</span>Expertise</div>
+      <div class="sec-body">
+        <h2 id="t-expertise">Cinq domaines, une même chaîne de travail.</h2>
+        <ul class="domains">
+          <li><h3>Data</h3><p>Collecter, nettoyer et modéliser les données pour qu'elles restent exploitables et fiables dans le temps.</p><p class="tools">Python, SQL, PostgreSQL, ETL</p></li>
+          <li><h3>Business intelligence</h3><p>Transformer des tables en indicateurs lisibles, et ces indicateurs en rapports que les équipes utilisent vraiment.</p><p class="tools">Power BI, Power Query, DAX</p></li>
+          <li><h3>Intelligence artificielle</h3><p>Construire un modèle quand il apporte quelque chose, et savoir dire quand une règle simple suffit.</p><p class="tools">Machine learning, IA générative, automatisation</p></li>
+          <li><h3>Solutions numériques</h3><p>Développer et déployer les applications qui mettent les données entre les mains de ceux qui en ont besoin.</p><p class="tools">Laravel, React, API, Docker</p></li>
+          <li><h3>Gouvernance des données</h3><p>Définir qui produit quoi, comment on contrôle la qualité, et comment on protège les données sensibles.</p><p class="tools">Qualité, structuration, sécurité des données</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MÉTHODE -->
+  <section class="band" id="methode" aria-labelledby="t-methode">
+    <div class="wrap sec-grid" style="padding-top:clamp(56px,8vw,96px)">
+      <div class="sec-label"><span class="n num">3</span>Méthode</div>
+      <div class="sec-body">
+        <h2 id="t-methode">Comment je travaille.</h2>
+        <p class="method-lead">Je commence rarement par la technologie. Je commence par comprendre le problème, les données disponibles et la décision que l'on cherche à améliorer.</p>
+        <ol class="method">
+          <li><span class="st">01</span><h3>Comprendre</h3><p>Je fais préciser le besoin et la décision visée avant de toucher aux données.</p></li>
+          <li><span class="st">02</span><h3>Structurer</h3><p>J'inventorie les données disponibles et je les organise.</p></li>
+          <li><span class="st">03</span><h3>Analyser</h3><p>J'explore pour isoler ce qui compte, et repérer ce qui manque.</p></li>
+          <li><span class="st">04</span><h3>Construire</h3><p>Je développe la solution la plus simple qui répond au besoin.</p></li>
+          <li><span class="st">05</span><h3>Mesurer</h3><p>Je vérifie qu'elle est utilisée et qu'elle aide, puis j'ajuste.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PARCOURS -->
+  <section class="sec" id="parcours" aria-labelledby="t-parcours">
+    <div class="wrap sec-grid">
+      <div class="sec-label"><span class="n num">4</span>Parcours</div>
+      <div class="sec-body">
+        <h2 id="t-parcours">Expérience.</h2>
+        <ol class="ledger" reversed>
+          <li>
+            <span class="when">Juil. 2026 – aujourd'hui</span>
+            <div>
+              <h3>Appui technique, données sanitaires (DHIS2)<span class="kind">Prestation de services</span><span class="now">En cours</span></h3>
+              <p class="org">Ministère de la Santé et de l'Hygiène publique</p>
+              <ul>
+                <li>Intégration et contrôle qualité des données sanitaires de routine dans DHIS2 : complétude, cohérence, ponctualité.</li>
+                <li>Exploitation des tableaux de bord DHIS2 pour le suivi des indicateurs et de la qualité des données.</li>
+                <li>Signalement des anomalies au médecin-chef de district et au responsable des statistiques.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="when">Févr. 2026 – aujourd'hui</span>
+            <div>
+              <h3>Ingénieur logiciel, data et infrastructure<span class="kind">Freelance</span><span class="now">En cours</span></h3>
+              <p class="org">SenPay, à distance</p>
+              <ul>
+                <li>Déploiement et évolution d'une plateforme Angular et Spring Boot sur serveur Linux.</li>
+                <li>Administration de l'infrastructure Docker Compose (MySQL, Redis) et migrations de schéma.</li>
+                <li>Intégration de fournisseurs SMS avec mécanisme de basculement.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="when">Janv. 2026 – aujourd'hui</span>
+            <div>
+              <h3>Gérant, ingénieur data et IA<span class="kind">Entrepreneuriat</span><span class="now">En cours</span></h3>
+              <p class="org">Technosus</p>
+              <ul>
+                <li>Conception de plateformes et d'applications métiers, dont XAMIO.</li>
+                <li>Missions de conseil en data, business intelligence et IA.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="when">Juil. 2024 – déc. 2025</span>
+            <div>
+              <h3>Ingénieur en données et intelligence artificielle<span class="kind">Emploi, temps plein</span></h3>
+              <p class="org">Fonds d'Impulsion de la Microfinance (FIMF), Ministère de la Microfinance et de l'Économie Sociale et Solidaire</p>
+              <ul>
+                <li>Gestion des bases de données, extraction et traitement des données.</li>
+                <li>Tableaux de bord décisionnels et reporting sous Power BI.</li>
+                <li>Modèles de machine learning et outils internes.</li>
+                <li>Analyse des besoins, maintenance et documentation des systèmes d'information.</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="when">Oct. 2023 – juin 2024</span>
+            <div>
+              <h3>Ingénierie des données et développement<span class="kind">Stage</span></h3>
+              <p class="org">Fonds d'Impulsion de la Microfinance (FIMF)</p>
+              <ul>
+                <li>Nettoyage et structuration des données des besoins et demandes d'appui des systèmes financiers décentralisés.</li>
+                <li>Conception et développement d'une application de gestion de bases de données.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="edu">
+          <h3>Formation</h3>
+          <dl>
+            <dt>2021–2024</dt><dd>Diplôme d'ingénieur de conception des télécommunications, spécialité ingénierie des données et intelligence artificielle, ESMT Dakar. Mention très bien. Mémoire : plateforme de prédiction de la solvabilité des emprunteurs en microfinance par machine learning.</dd>
+            <dt>2021–2022</dt><dd>Licence en sciences de l'ingénieur, télécommunications, ESMT Dakar</dd>
+            <dt>2017–2021</dt><dd>Licence en télécommunications, Université Gaston Berger, Saint-Louis</dd>
+            <dt>Certification</dt><dd>Finance digitale, Centre d'Excellence Africaine en Mathématiques, Informatique et TIC</dd>
+            <dt>Langues</dt><dd>Français courant, anglais intermédiaire</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TRANSMISSION -->
+  <section class="sec" id="enseignement" aria-labelledby="t-enseignement">
+    <div class="wrap sec-grid">
+      <div class="sec-label"><span class="n num">5</span>Transmission</div>
+      <div class="sec-body">
+        <h2 id="t-enseignement">Transmission et formation.</h2>
+        <div class="teach">
+          <blockquote>
+            <p style="margin:0">En parallèle de mes projets, j'enseigne en licence et en master. Expliquer une notion à des étudiants reste le meilleur moyen de vérifier que je l'ai vraiment comprise.</p>
+          </blockquote>
+          <div>
+            <ul class="schools">
+              <li><b>Univers Professionnel (UNIPRO)</b><span class="num">Chargé de cours, de la licence 1 au master 1, depuis janv. 2026</span></li>
+              <li><b>Institut Africain de Management (IAM)</b><span class="num">Chargé de cours en master 1, depuis févr. 2026</span></li>
+            </ul>
+            <ul class="subjects" aria-label="Domaines enseignés">
+              <li>Intelligence artificielle</li>
+              <li>Gouvernance des données et de l'IA</li>
+              <li>SQL</li>
+              <li>Power BI</li>
+              <li>Talend</li>
+              <li>Développement web</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. OUTILS -->
+  <section class="sec" id="outils" aria-labelledby="t-outils">
+    <div class="wrap sec-grid">
+      <div class="sec-label"><span class="n num">6</span>Outils</div>
+      <div class="sec-body">
+        <h2 id="t-outils">Outils de travail.</h2>
+        <dl class="stackline">
+          <div><dt>Data</dt><dd>Python, SQL, PostgreSQL, Talend</dd></div>
+          <div><dt>BI</dt><dd>Power BI, Power Query, DAX</dd></div>
+          <div><dt>IA</dt><dd>Scikit-learn, IA générative</dd></div>
+          <div><dt>Ingénierie</dt><dd>Laravel, React, JavaScript, Docker, Git, Linux</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="t-contact">
+    <div class="wrap">
+      <div class="sec-grid">
+        <div class="sec-label"><span class="n num">7</span>Contact</div>
+        <div class="sec-body">
+          <p class="qs"><span>Un problème de données ?</span><span>Une idée de produit ?</span><span>Un projet numérique à construire ?</span></p>
+          <h2 id="t-contact" class="go" style="font-family:var(--cond);max-width:none">Parlons-en.</h2>
+
+          <div class="contact-grid">
+            <div class="direct">
+              <ul class="reasons" aria-label="Sujets pour lesquels me contacter">
+                <li><b>Data et business intelligence</b><span>Structuration de données, tableaux de bord, reporting</span></li>
+                <li><b>IA appliquée</b><span>Modèles d'aide à la décision, automatisation</span></li>
+                <li><b>Solutions numériques</b><span>Applications métiers, déploiement</span></li>
+                <li><b>Missions et collaborations</b><span>Projets ponctuels ou suivis dans la durée</span></li>
+                <li><b>Formation et accompagnement</b><span>IA, gouvernance des données, outils data</span></li>
+              </ul>
+              <p style="margin-top:24px"><small>Email</small><a href="mailto:daoudaboye19@gmail.com">daoudaboye19@gmail.com</a></p>
+              <p><small>LinkedIn</small><a href="https://www.linkedin.com/in/daouda-boye-856222182" target="_blank" rel="noopener">linkedin.com/in/daouda-boye-856222182</a></p>
+            </div>
+            <form id="form" novalidate>
+              <div class="field">
+                <label for="f-name">Nom</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+                <p class="err" id="e-name"></p>
+              </div>
+              <div class="field">
+                <label for="f-mail">Email</label>
+                <input id="f-mail" name="email" type="email" autocomplete="email" required aria-describedby="e-mail">
+                <p class="err" id="e-mail"></p>
+              </div>
+              <div class="field full">
+                <label for="f-subj">Sujet</label>
+                <input id="f-subj" name="subject" type="text" placeholder="Tableau de bord, application, formation…">
+              </div>
+              <div class="field full">
+                <label for="f-msg">Message</label>
+                <textarea id="f-msg" name="message" required aria-describedby="e-msg"></textarea>
+                <p class="err" id="e-msg"></p>
+              </div>
+              <div class="form-foot">
+                <button class="btn btn-solid" type="submit">Préparer l'email</button>
+                <p id="f-note">Le formulaire ouvre votre messagerie avec le message déjà rédigé. Si rien ne s'ouvre, écrivez directement à daoudaboye19@gmail.com.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="lb" id="lb" aria-label="Capture agrandie">
+  <div class="lb-bar"><span id="lb-cap"></span><button type="button" id="lb-close">Fermer</button></div>
+  <img id="lb-img" alt="">
+</dialog>
+
+<footer>
+  <div class="wrap">
+    <span>© <span class="num">2026</span> Daouda Boye, Dakar</span>
+    <span>Composé en IBM Plex Sans et IBM Plex Serif</span>
+    <a href="#haut">Haut de page</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  root.classList.add('js');
+
+  var btn = document.getElementById('theme');
+  function current(){
+    var t = root.getAttribute('data-theme');
+    if (t) return t;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function label(){ btn.textContent = current() === 'dark' ? 'Thème clair' : 'Thème sombre'; }
+  try { var saved = localStorage.getItem('db-theme'); if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved); } catch(e){}
+  label();
+  btn.addEventListener('click', function(){
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('db-theme', next); } catch(e){}
+    label();
+  });
+
+  var chain = document.getElementById('chain');
+  var out = document.getElementById('readout');
+  var items = chain.querySelectorAll('li');
+  function select(li){
+    items.forEach(function(x){ x.classList.remove('on'); x.querySelector('button').setAttribute('aria-pressed','false'); });
+    li.classList.add('on');
+    var b = li.querySelector('button');
+    b.setAttribute('aria-pressed','true');
+    out.innerHTML = '<b>' + b.querySelector('.k').textContent + '</b>' + b.getAttribute('data-t');
+  }
+  items.forEach(function(li){
+    var b = li.querySelector('button');
+    b.addEventListener('click', function(){ select(li); });
+    b.addEventListener('mouseenter', function(){ select(li); });
+    b.addEventListener('focus', function(){ select(li); });
+  });
+  select(items[0]);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) chain.classList.add('anim');
+
+  // Ouvrir l'étude de cas quand on arrive par une ancre de projet
+  function openFromHash(){
+    var el = location.hash && document.querySelector(location.hash);
+    if (el && el.classList.contains('case')){ var d = el.querySelector('details'); if (d) d.open = true; }
+  }
+  window.addEventListener('hashchange', openFromHash); openFromHash();
+
+
+
+  // Déroulement des études de cas
+  document.querySelectorAll('.case details').forEach(function(d){
+    var sum = d.querySelector('summary'), body = d.querySelector('.study'), busy = false;
+    sum.addEventListener('click', function(e){
+      if (reduce || !body.animate) return;
+      e.preventDefault();
+      if (busy) return; busy = true;
+      if (!d.open){
+        d.open = true;
+        var h = body.scrollHeight;
+        body.animate([{height:'0px',opacity:0},{height:h+'px',opacity:1}],{duration:220,easing:'cubic-bezier(.2,.7,.2,1)'}).onfinish = function(){ busy = false; };
+      } else {
+        var h2 = body.scrollHeight;
+        var a = body.animate([{height:h2+'px',opacity:1},{height:'0px',opacity:0}],{duration:180,easing:'ease-in'});
+        a.onfinish = function(){ d.open = false; busy = false; };
+      }
+    });
+  });
+
+  // Agrandissement des captures
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbCap = document.getElementById('lb-cap');
+  document.querySelectorAll('.zoom').forEach(function(z){
+    z.addEventListener('click', function(){
+      lbImg.src = z.getAttribute('data-full'); lbImg.alt = z.getAttribute('data-alt');
+      lbCap.textContent = z.getAttribute('aria-label').replace('Agrandir la capture : ','');
+      if (lb.showModal) lb.showModal(); else window.open(z.getAttribute('data-full'));
+    });
+  });
+  document.getElementById('lb-close').addEventListener('click', function(){ lb.close(); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) lb.close(); });
+
+  var form = document.getElementById('form');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var name = form.name.value.trim(), mail = form.email.value.trim(), subj = form.subject.value.trim(), msg = form.message.value.trim();
+    var ok = true;
+    function set(id, text){ var e = document.getElementById(id); e.textContent = text; e.previousElementSibling.setAttribute('aria-invalid', text ? 'true' : 'false'); if (text) ok = false; }
+    set('e-name', name ? '' : 'Indiquez votre nom.');
+    set('e-mail', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail) ? '' : 'Indiquez une adresse email valide, par exemple nom@domaine.com.');
+    set('e-msg', msg.length >= 10 ? '' : 'Décrivez votre besoin en quelques mots (10 caractères minimum).');
+    if (!ok){ var first = form.querySelector('.err:not(:empty)'); if (first) first.previousElementSibling.focus(); return; }
+    var body = msg + '\n\n' + name + '\n' + mail;
+    window.location.href = 'mailto:daoudaboye19@gmail.com?subject=' + encodeURIComponent(subj || ('Prise de contact de ' + name)) + '&body=' + encodeURIComponent(body);
+    document.getElementById('f-note').textContent = "Votre messagerie devrait s'ouvrir avec le message prêt à envoyer. Si rien ne s'ouvre, écrivez directement à daoudaboye19@gmail.com.";
+  });
+})();
+</script>
+</body>
+</html>
