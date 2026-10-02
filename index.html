@@ -400,6 +400,21 @@ dialog.lb[open]::backdrop{animation:lb-fade .2s ease-out}
 @keyframes lb-fade{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion: reduce){dialog.lb[open],dialog.lb[open]::backdrop{animation:none}}
 .thumbs .zoom img{aspect-ratio:16/8;object-fit:cover;object-position:top left}
+
+/* Hero : tout l'essentiel dans le premier écran */
+.hero{padding:clamp(28px,4.5vw,64px) 0 32px}
+.hero h1{font-size:clamp(56px,8.6vw,128px);line-height:.88}
+.hero .role{margin-top:16px}
+.hero .tag{margin-top:6px;font-size:clamp(20px,2vw,28px)}
+.hero-top{grid-template-columns:minmax(0,1fr) clamp(150px,16vw,230px)}
+.hero-row{margin-top:28px}
+.ctas{margin-top:20px}
+.offer{margin-top:14px}
+@media (max-width:640px){.portrait{max-width:120px}}
+@media (max-width:640px){.hero-top{grid-template-columns:1fr}}
+.hero-lead{font-size:18px}
+.hero-row{margin-top:24px}
+.hero h1{font-size:clamp(56px,min(8.6vw,15.5vh),128px)}
 </style>
 </head>
 <body>
