@@ -415,6 +415,9 @@ dialog.lb[open]::backdrop{animation:lb-fade .2s ease-out}
 .hero-lead{font-size:18px}
 .hero-row{margin-top:24px}
 .hero h1{font-size:clamp(56px,min(8.6vw,15.5vh),128px)}
+.pindex span:last-child{color:var(--ink)}
+.pindex a{grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,4.5fr)}
+@media (max-width:640px){.pindex a{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -489,11 +492,11 @@ dialog.lb[open]::backdrop{animation:lb-fade .2s ease-out}
 
         <h3 class="group">Projets principaux <small>5 projets</small></h3>
         <ol class="pindex" aria-label="Sommaire des projets principaux">
-          <li><a href="#projet-imf"><b>Analyse des besoins de 75 IMF</b><span>Business intelligence, microfinance</span><span>Captures du rapport Power BI</span></a></li>
-          <li><a href="#projet-solvabilite"><b>Prédiction de la solvabilité</b><span>Machine learning, mémoire d'ingénieur</span><span>Captures et résultats des modèles</span></a></li>
-          <li><a href="#projet-prix-inclusion"><b>Prix de l'inclusion financière</b><span>Plateforme institutionnelle, ministère</span><span>Captures d'interface</span></a></li>
-          <li><a href="#projet-dalal-diamm"><b>Dalal Diamm Services</b><span>Application métier, mobile money</span><span>Captures d'interface</span></a></li>
-          <li><a href="#projet-xamio"><b>XAMIO</b><span>Produit SaaS, Technosus</span><span>Captures d'interface</span></a></li>
+          <li><a href="#projet-imf"><b>Analyse des besoins de 75 IMF</b><span>Business intelligence, microfinance</span><span>Rapport Power BI de six pages, 75 IMF et 121 agences</span></a></li>
+          <li><a href="#projet-solvabilite"><b>Prédiction de la solvabilité</b><span>Machine learning, mémoire d'ingénieur</span><span class="num">2024, 85 % d'exactitude, plateforme web</span></a></li>
+          <li><a href="#projet-prix-inclusion"><b>Prix de l'inclusion financière</b><span>Plateforme institutionnelle, ministère</span><span class="num">2025, quatre profils d'utilisateurs</span></a></li>
+          <li><a href="#projet-dalal-diamm"><b>Dalal Diamm Services</b><span>Application métier, mobile money</span><span>Réseau de caisses, épargne et prêts</span></a></li>
+          <li><a href="#projet-xamio"><b>XAMIO</b><span>Produit SaaS, Technosus</span><span>Résumés de réunions générés par l'IA</span></a></li>
         </ol>
 
         <div class="cases">
