@@ -553,6 +553,15 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 .copy-status{font-size:14px;color:var(--graphite);min-width:1px}
 .contact-links{list-style:none;margin:28px 0 0;padding:16px 0 0;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:10px 32px;font-size:16px;color:var(--graphite)}
 .contact-links a{color:var(--ink)}
+
+/* Hero : texte et boutons à côté de la photo */
+.hero-top{align-items:start}
+.hero-top .hero-row{display:block;margin-top:22px}
+.hero-top .hero-lead{max-width:62ch}
+.hero-top .portrait{margin-top:10px}
+.chain button{padding-top:26px}
+.readout b{font-family:var(--cond);font-weight:600;font-size:17px;color:var(--ink);margin-right:12px}
+.readout{margin-top:30px}
 </style>
 </head>
 <body>
@@ -580,7 +589,14 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
         <div>
           <h1 id="nom">Daouda<br>Boye</h1>
           <p class="role">Ingénieur en données et intelligence artificielle</p>
-                  </div>
+                    <div class="hero-row">
+        <p class="hero-lead">Je construis des outils à partir de données&nbsp;: rapports Power BI, modèles de machine learning et applications métiers. Aujourd'hui, je travaille sur la qualité des données sanitaires pour le ministère de la Santé, je maintiens une plateforme en production pour SenPay et je développe XAMIO avec Technosus.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" href="#projets">Voir les projets</a>
+          <a class="btn btn-line" href="#contact">Me contacter</a>
+        </div>
+      </div>
+        </div>
         <figure class="portrait">
           <picture>
             <source srcset="assets/daouda-boye.avif" type="image/avif">
@@ -590,14 +606,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <figcaption>Dakar, Sénégal</figcaption>
         </figure>
       </div>
-      <div class="hero-row">
-        <p class="hero-lead">Aujourd'hui, je contrôle des données sanitaires sur DHIS2 pour le ministère de la Santé, je maintiens une plateforme en production pour SenPay et je développe XAMIO avec Technosus. Avant, un peu plus de deux ans au FIMF : bases de données, rapports Power BI, machine learning.</p>
-        <div class="ctas">
-          <a class="btn btn-solid" href="#projets">Voir les projets</a>
-          <a class="btn btn-line" href="#contact">Me contacter</a>
-        </div>
-        <p class="offer">Vous pouvez me contacter pour un rapport Power BI, un modèle d'aide à la décision, une application métier ou un cours.</p>
-      </div>
+
 
       <figure class="chain" id="chain" aria-labelledby="chain-cap">
         <div class="chain-head">
@@ -605,14 +614,14 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <span>Sélectionnez une étape</span>
         </div>
         <ol>
-          <li><button type="button" data-t="Savoir quelle décision l'outil doit aider à prendre, et qui la prend."><span class="k num">a</span><span class="w">Problème</span></button></li>
-          <li><button type="button" data-t="Faire l'inventaire de ce qui existe : un fichier d'enquête, une base MySQL, des registres papier à saisir dans DHIS2…"><span class="k num">b</span><span class="w">Données</span></button></li>
-          <li><button type="button" data-t="Voir ce que les données disent vraiment. Dans mon mémoire, les prêts refusés étaient minoritaires : il fallait en tenir compte."><span class="k num">c</span><span class="w">Analyse</span></button></li>
-          <li><button type="button" data-t="Choisir l'outil le plus simple : parfois un rapport Power BI suffit, parfois il faut une application."><span class="k num">d</span><span class="w">Solution</span></button></li>
-          <li><button type="button" data-t="Automatiser ce qui revient chaque jour, comme le suivi des clôtures de caisse, sans retirer les contrôles."><span class="k num">e</span><span class="w">Automatisation</span></button></li>
-          <li><button type="button" data-t="Une information fiable, disponible au moment où quelqu'un doit trancher."><span class="k num">f</span><span class="w">Décision</span></button></li>
+          <li><button type="button" data-t="Savoir quelle décision l'outil doit aider à prendre, et qui la prend."><span class="w">Problème</span></button></li>
+          <li><button type="button" data-t="Faire l'inventaire de ce qui existe : un fichier d'enquête, une base MySQL, des registres papier à saisir dans DHIS2…"><span class="w">Données</span></button></li>
+          <li><button type="button" data-t="Voir ce que les données disent vraiment. Dans mon mémoire, les prêts refusés étaient minoritaires : il fallait en tenir compte."><span class="w">Analyse</span></button></li>
+          <li><button type="button" data-t="Choisir l'outil le plus simple : parfois un rapport Power BI suffit, parfois il faut une application."><span class="w">Solution</span></button></li>
+          <li><button type="button" data-t="Automatiser ce qui revient chaque jour, comme le suivi des clôtures de caisse, sans retirer les contrôles."><span class="w">Automatisation</span></button></li>
+          <li><button type="button" data-t="Une information fiable, disponible au moment où quelqu'un doit trancher."><span class="w">Décision</span></button></li>
         </ol>
-        <p class="readout" id="readout" aria-live="polite"><b>a</b>Savoir quelle décision l'outil doit aider à prendre, et qui la prend.</p>
+        <p class="readout" id="readout" aria-live="polite"><b>Problème</b>Savoir quelle décision l'outil doit aider à prendre, et qui la prend.</p>
       </figure>
     </div>
   </section>
@@ -1117,7 +1126,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
     li.classList.add('on');
     var b = li.querySelector('button');
     b.setAttribute('aria-pressed','true');
-    out.innerHTML = '<b>' + b.querySelector('.k').textContent + '</b>' + b.getAttribute('data-t');
+    out.innerHTML = '<b>' + b.querySelector('.w').textContent + '</b>' + b.getAttribute('data-t');
   }
   items.forEach(function(li){
     var b = li.querySelector('button');
