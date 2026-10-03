@@ -164,7 +164,7 @@ a:hover{text-decoration-color:var(--mark)}
 }
 
 /* Sections */
-.sec{padding:clamp(72px,10vw,128px) 0 0}
+.sec{padding:clamp(56px,10vw,128px) 0 0}
 .sec-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
 .sec-label{grid-column:1 / 4;font-size:15px;color:var(--graphite);padding-top:10px;border-top:1px solid var(--rule)}
 .sec-label .n{display:block;font-family:var(--cond);font-weight:600;font-size:15px;color:var(--ink)}
@@ -584,13 +584,23 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
   .hero-top{grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:0;align-items:end}
   .hero-top>div:first-child{display:contents}
   .hero-top h1{grid-column:1;grid-row:1}
-  .hero-top .portrait{grid-column:2;grid-row:1;order:0;width:clamp(72px,22vw,112px);max-width:none;margin:0;align-self:end}
+  .hero-top .portrait{grid-column:2;grid-row:1;order:0;width:clamp(72px,20vw,96px);max-width:none;margin:0;align-self:end}
   .hero-top .portrait figcaption{display:none}
   .hero-top>div:first-child>*:not(h1){grid-column:1 / -1}
 }
-.chain button{padding-top:26px}
+/* Téléphone à l'horizontale : hauteur très faible */
+@media (max-width:960px) and (max-height:520px){
+  .hero{padding-top:14px}
+  .hero .role{margin-top:6px}
+  .hero .tag{margin-top:4px;font-size:19px}
+  .hero-top .hero-row{margin-top:10px}
+  .hero-lead{font-size:16px}
+  .hero .ctas{margin-top:12px}
+}
+@media (min-width:761px){.chain button{padding-top:26px}}
 .readout b{font-family:var(--cond);font-weight:600;font-size:17px;color:var(--ink);margin-right:12px}
 .readout{margin-top:30px}
+@media (max-width:760px){.hero{padding-bottom:12px}.chain ol::before{top:20px;bottom:23px}.chain button{padding:12px 0 12px 30px}.chain button::before{top:14px}.readout{margin-top:18px;font-size:17px;line-height:1.5}.chain-head{margin-bottom:16px}}
 </style>
 </head>
 <body>
