@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Daouda Boye, ingénieur en données et intelligence artificielle</title>
-<meta name="description" content="Daouda Boye, ingénieur en données et intelligence artificielle à Dakar. Rapport Power BI sur 75 institutions de microfinance, applications métiers, machine learning, parcours et enseignement.">
+<title>Daouda Boye, ingénieur Data &amp; IA</title>
+<meta name="description" content="Daouda Boye, ingénieur Data &amp; IA à Dakar. Je transforme les données en outils d'aide à la décision et en applications métier : rapport Power BI sur 75 institutions de microfinance, modèle de solvabilité, applications métier, enseignement.">
 <meta name="author" content="Daouda Boye">
 <meta name="theme-color" content="#EDEEE9">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Daouda Boye, ingénieur en données et IA">
-<meta property="og:description" content="Ingénieur en données et IA à Dakar. Rapport Power BI sur 75 IMF, modèle de solvabilité, plateforme du Prix de l'inclusion financière, XAMIO.">
+<meta property="og:title" content="Daouda Boye, ingénieur Data &amp; IA">
+<meta property="og:description" content="Ingénieur Data &amp; IA à Dakar. Des données aux outils d'aide à la décision et aux applications métier : rapport Power BI sur 75 IMF, modèle de solvabilité, plateforme du Prix de l'inclusion financière, XAMIO.">
 <link rel="canonical" href="https://daoudaboye.github.io/portfolio-daouda-boye/">
 <meta property="og:url" content="https://daoudaboye.github.io/portfolio-daouda-boye/">
 <meta property="og:image" content="https://daoudaboye.github.io/portfolio-daouda-boye/assets/og-image.jpg">
@@ -27,16 +27,16 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Daouda Boye",
-  "jobTitle": "Ingénieur en données et intelligence artificielle",
+  "jobTitle": "Ingénieur Data & IA",
+  "description": "Ingénieur Data & IA spécialisé dans la transformation des données en outils d'aide à la décision et en applications métier.",
   "email": "mailto:daoudaboye19@gmail.com",
   "image": "https://daoudaboye.github.io/portfolio-daouda-boye/assets/daouda-boye.jpg",
   "url": "https://daoudaboye.github.io/portfolio-daouda-boye/",
   "address": { "@type": "PostalAddress", "addressLocality": "Dakar", "addressCountry": "SN" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "École Supérieure Multinationale des Télécommunications (ESMT)" },
   "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Diplôme d'ingénieur de conception des télécommunications, spécialité ingénierie des données et intelligence artificielle" },
-  "worksFor": { "@type": "Organization", "name": "Technosus" },
   "sameAs": ["https://www.linkedin.com/in/daouda-boye-856222182"],
-  "knowsAbout": ["Data engineering", "Business intelligence", "Machine learning", "Gouvernance des données", "Power BI", "Python", "SQL"]
+  "knowsAbout": ["Data engineering", "Business intelligence", "Machine learning", "Power BI", "Python", "SQL", "Gouvernance des données", "Laravel", "React", "Docker"]
 }
 </script>
 <style>
@@ -184,12 +184,23 @@ a:hover{text-decoration-color:var(--mark)}
 
 /* Expertise */
 .domains{margin:36px 0 0;padding:0;list-style:none}
-.domains li{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,5fr) minmax(0,4fr);gap:24px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.domains li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,5fr) minmax(0,3fr);gap:28px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--rule)}
 .domains li:first-child{border-top:1px solid var(--rule)}
-.domains h3{font-family:var(--cond);font-weight:600;font-size:24px;line-height:1.15;margin:0}
+.domains h3,.domains h4{font-family:var(--cond);font-weight:600;font-size:20px;line-height:1.25;margin:0}
 .domains p{margin:0;max-width:46ch}
-.domains .tools{font-size:15px;color:var(--graphite)}
-@media (max-width:860px){.domains li{grid-template-columns:1fr;gap:6px}}
+.domains .tools{font-size:14px;line-height:1.55;color:var(--graphite)}
+@media (max-width:860px){.domains li{grid-template-columns:1fr;gap:6px}.domains .tools{margin-top:4px}}
+#expertise .group{margin-top:44px}
+#expertise .group + .domains{margin-top:0}
+#expertise .group + .domains li:first-child{border-top:0}
+.domains-core .tools{color:var(--ink);font-weight:500}
+.domains-eng h4{font-family:var(--sans);font-weight:500;font-size:17px}
+.domains-eng p:not(.tools){font-size:16px;color:var(--graphite)}
+.extras{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.extras div{padding:14px 0;border-bottom:1px solid var(--rule)}
+.extras dt{font-size:15px;font-weight:500}
+.extras dd{margin:2px 0 0;font-size:14px;line-height:1.5;color:var(--graphite)}
+@media (max-width:600px){.extras{grid-template-columns:1fr}#expertise .group{flex-direction:column;align-items:flex-start;gap:2px}}
 
 /* Projets */
 .cases{margin-top:40px}
@@ -229,18 +240,20 @@ a:hover{text-decoration-color:var(--mark)}
 
 /* Méthode */
 .method{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);position:relative}
-.method::before{content:"";position:absolute;left:0;right:0;top:34px;height:1px;background:var(--ink)}
-.method li{position:relative;padding-right:18px}
+.method::before{content:"";position:absolute;left:0;right:0;top:44px;height:1px;background:var(--ink)}
+.method li{position:relative;padding-right:24px}
 .method .st{font-family:var(--cond);font-weight:700;font-size:28px;line-height:1;display:block;margin-bottom:22px;font-variant-numeric:tabular-nums}
-.method li::after{content:"";position:absolute;top:29px;left:0;width:11px;height:11px;background:var(--paper);border:1px solid var(--ink);transform:rotate(45deg)}
+.method li::after{content:"";position:absolute;top:44px;left:2px;width:11px;height:11px;background:var(--paper);border:1px solid var(--ink);transform:translateY(-50%) rotate(45deg)}
 .method li:last-child::after{background:var(--mark);border-color:var(--mark-ink)}
-.method h3{font-family:var(--serif);font-weight:500;font-size:22px;margin:22px 0 6px}
-.method p{margin:0;font-size:16px;color:var(--graphite);max-width:26ch}
+.method h3{font-family:var(--serif);font-weight:500;font-size:22px;margin:22px 0 8px}
+.method p{margin:0;font-size:16px;line-height:1.55;color:var(--graphite);max-width:30ch}
 @media (max-width:860px){
   .method{grid-template-columns:1fr;margin-top:32px}
   .method::before{top:0;bottom:0;left:5px;right:auto;width:1px;height:auto}
   .method li{padding:0 0 26px 36px}
-  .method li::after{top:8px;left:0}
+  .method li::after{top:11px;left:0}
+  .method li:last-child{padding-bottom:0}
+  .method li:last-child::before{content:"";position:absolute;left:5px;top:12px;bottom:0;width:1px;background:var(--band-bg,var(--paper))}
   .method .st{font-size:20px;margin-bottom:0}
   .method h3{margin-top:4px}
   .method p{max-width:none}
@@ -264,9 +277,12 @@ a:hover{text-decoration-color:var(--mark)}
 @media (max-width:860px){.ledger > li,.edu{grid-template-columns:1fr;gap:6px}.edu dl{grid-template-columns:1fr;gap:2px}.edu dd{margin-bottom:10px}}
 
 /* Enseignement */
-.teach{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);margin-top:36px}
-.teach blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.35}
-.teach blockquote::before{content:"";display:block;width:48px;height:3px;background:var(--mark);margin-bottom:20px}
+.teach{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(24px,5vw,72px);margin-top:36px;align-items:start}
+.teach-lead{margin:0;font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.5;max-width:36ch}
+.teach-lead::before{content:"";display:block;width:48px;height:3px;background:var(--mark);margin-bottom:20px}
+.schools li:first-child{padding-top:0}
+.schools .role,.schools .since{display:block}
+.schools .since{margin-top:2px}
 .schools{margin:0 0 24px;padding:0;list-style:none}
 .schools li{padding:12px 0;border-bottom:1px solid var(--rule)}
 .schools b{font-weight:500;display:block}
@@ -352,13 +368,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .reasons li:first-child{border-top:1px solid var(--rule)}
 .reasons b{font-weight:500;display:block}
 .reasons span{font-size:15px;color:var(--graphite)}
-.stackline{margin:28px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
-.stackline div{padding:16px 16px 18px 0}
-.stackline div + div{border-left:1px solid var(--rule);padding-left:16px}
-.stackline dt{font-family:var(--cond);font-weight:700;font-size:15px;color:var(--graphite);margin-bottom:4px}
-.stackline dd{margin:0}
-@media (max-width:860px){.stackline{grid-template-columns:repeat(2,minmax(0,1fr))}.stackline div:nth-child(3){border-left:0;padding-left:0}.stackline div:nth-child(n+3){border-top:1px solid var(--rule)}}
-@media (max-width:480px){.stackline{grid-template-columns:1fr}.stackline div + div{border-left:0;padding-left:0;border-top:1px solid var(--rule)}}
 
 .sr-h{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
@@ -405,10 +414,11 @@ dialog.lb[open]::backdrop{animation:lb-fade .2s ease-out}
 .thumbs .zoom img{aspect-ratio:16/8;object-fit:cover;object-position:top left}
 
 /* Hero : tout l'essentiel dans le premier écran */
-.hero{padding:clamp(28px,4.5vw,64px) 0 32px}
-.hero h1{font-size:clamp(56px,8.6vw,128px);line-height:.88}
+.hero{padding:clamp(24px,3.5vw,52px) 0 32px}
+.hero h1{font-size:clamp(56px,7.6vw,112px);line-height:.88}
 .hero .role{margin-top:16px}
-.hero .tag{margin-top:6px;font-size:clamp(20px,2vw,28px)}
+.hero .tag{margin-top:6px;font-size:clamp(20px,1.8vw,26px);max-width:48ch}
+.hero .role{font-weight:600;font-size:clamp(22px,2.5vw,32px)}
 .hero-top{grid-template-columns:minmax(0,1fr) clamp(150px,16vw,230px)}
 .hero-row{margin-top:28px}
 .ctas{margin-top:20px}
@@ -533,11 +543,19 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 .tl-group p{margin:0;border-left:1px solid var(--ink);padding:18px 0 2px 30px;font-family:var(--cond);font-weight:600;font-size:17px}
 .tl-group small{display:block;font-family:var(--sans);font-weight:400;font-size:14px;color:var(--graphite);margin-top:2px}
 .tl-group + .tl-past{margin-top:0}
+.tl .ledger>li,.tl-group{grid-template-columns:12rem minmax(0,1fr)}
+.tl .ledger>li .when{text-align:right;white-space:nowrap}
+.ledger h3 .kind{margin-left:0}
+.tl-group p{position:relative}
+.tl-group p::before{content:"";position:absolute;left:0;top:29px;width:18px;height:1px;background:var(--ink)}
+.tl .ledger ul{font-size:17px;line-height:1.55}
+.tl .ledger li li{margin-bottom:6px}
 @media (max-width:860px){
   .tl-group{grid-template-columns:1fr;gap:0}
   .tl-group>span{display:none}
   .tl .ledger>li{position:relative;border-left:1px solid var(--ink);padding-left:30px;gap:2px}
-  .tl .ledger>li .when{padding:20px 0 0}
+  .tl .ledger>li .when{padding:20px 0 0;text-align:left;white-space:normal}
+  .tl .ledger>li,.tl-group{grid-template-columns:1fr}
   .tl .ledger>li>div{border-left:0;padding:2px 0 22px 0;position:static}
   .tl .ledger>li>div::before{left:-6px;top:25px}
   .tl .ledger>li{position:relative}
@@ -556,8 +574,10 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 
 /* Hero : texte et boutons à côté de la photo */
 .hero-top{align-items:start}
-.hero-top .hero-row{display:block;margin-top:22px}
+.hero-top .hero-row{display:block;margin-top:18px}
+@media (min-width:861px) and (max-height:640px){.hero{padding-top:28px}.hero .role{margin-top:10px}.hero-top .hero-row{margin-top:14px}.hero .ctas{margin-top:16px}}
 .hero-top .hero-lead{max-width:62ch}
+@media (max-width:600px){.hero-lead{font-size:17px}}
 .hero-top .portrait{margin-top:10px}
 .chain button{padding-top:26px}
 .readout b{font-family:var(--cond);font-weight:600;font-size:17px;color:var(--ink);margin-right:12px}
@@ -569,9 +589,10 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#haut">Daouda Boye<span>Données et IA</span></a>
+    <a class="brand" href="#haut">Daouda Boye<span>Data &amp; IA</span></a>
     <nav class="nav" aria-label="Navigation principale">
       <a href="#projets">Projets</a>
+      <a href="#expertise">Compétences</a>
       <a href="#methode">Méthode</a>
       <a href="#parcours">Parcours</a>
       <a href="#formation">Formation</a>
@@ -588,9 +609,10 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
       <div class="hero-top">
         <div>
           <h1 id="nom">Daouda<br>Boye</h1>
-          <p class="role">Ingénieur en données et intelligence artificielle</p>
+          <p class="role">Ingénieur Data &amp; IA</p>
+          <p class="tag">Je transforme les données en outils d'aide à la décision et en applications métier.</p>
                     <div class="hero-row">
-        <p class="hero-lead">Je construis des outils à partir de données&nbsp;: rapports Power BI, modèles de machine learning et applications métiers. Aujourd'hui, je travaille sur la qualité des données sanitaires pour le ministère de la Santé, je maintiens une plateforme en production pour SenPay et je développe XAMIO avec Technosus.</p>
+        <p class="hero-lead">Aujourd'hui, je contrôle la qualité des données sanitaires pour le ministère de la Santé, je maintiens une plateforme en production pour SenPay et je développe XAMIO, un projet personnel.</p>
         <div class="ctas">
           <a class="btn btn-solid" href="#projets">Voir les projets</a>
           <a class="btn btn-line" href="#contact">Me contacter</a>
@@ -632,7 +654,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
       <div class="sec-label">Projets</div>
       <div class="sec-body">
         <h2 id="t-projets">Projets sélectionnés.</h2>
-        <p class="intro">Cinq projets, d'un rapport Power BI à un produit SaaS. Pour chacun : le problème de départ, ce que j'ai fait, les outils et le résultat. Les captures s'agrandissent au clic.</p>
+        <p class="intro">Cinq projets qui suivent le même fil : des données à l'analyse, de l'analyse à la décision, puis à l'application qui la rend utilisable au quotidien. Pour chacun : le problème de départ, ce que j'ai fait, les outils et le résultat. Les captures s'agrandissent au clic.</p>
 
       </div>
       <div class="cards-full" id="projets-cartes">
@@ -648,15 +670,15 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           </a></li>
           <li class="pcard"><a href="#projet-prix-inclusion">
             <span class="pc-frame"><picture><source type="image/avif" srcset="assets/card-prix.avif"><source type="image/webp" srcset="assets/card-prix.webp"><img src="assets/card-prix.jpg" width="470" height="240" loading="lazy" decoding="async" alt="Extrait d'un récapitulatif de candidature : période et secteurs d'activité"></picture></span>
-            <span class="pc-body"><span class="pc-meta">Plateforme institutionnelle, ministère</span><b class="pc-title">Prix de l'inclusion financière</b><span class="pc-fact num">2025, quatre profils d'utilisateurs</span><span class="pc-go">Voir l'étude de cas</span></span>
+            <span class="pc-body"><span class="pc-meta">Application métier, ministère</span><b class="pc-title">Prix de l'inclusion financière</b><span class="pc-fact num">2025, quatre profils d'utilisateurs</span><span class="pc-go">Voir l'étude de cas</span></span>
           </a></li>
           <li class="pcard"><a href="#projet-dalal-diamm">
             <span class="pc-frame"><picture><source type="image/avif" srcset="assets/card-dalal.avif"><source type="image/webp" srcset="assets/card-dalal.webp"><img src="assets/card-dalal.jpg" width="535" height="255" loading="lazy" decoding="async" alt="Extrait du tableau de bord réseau : patrimoine de 4 955 000 FCFA, en hausse de 200 000 FCFA depuis la veille"></picture></span>
-            <span class="pc-body"><span class="pc-meta">Application métier, mobile money</span><b class="pc-title">Dalal Diamm Services</b><span class="pc-fact">Réseau de caisses, épargne et prêts</span><span class="pc-go">Voir l'étude de cas</span></span>
+            <span class="pc-body"><span class="pc-meta">Application de pilotage, mobile money</span><b class="pc-title">Dalal Diamm Services</b><span class="pc-fact">Réseau de caisses, épargne et prêts</span><span class="pc-go">Voir l'étude de cas</span></span>
           </a></li>
           <li class="pcard"><a href="#projet-xamio">
             <span class="pc-frame"><picture><source type="image/avif" srcset="assets/card-xamio.avif"><source type="image/webp" srcset="assets/card-xamio.webp"><img src="assets/card-xamio.jpg" width="350" height="168" loading="lazy" decoding="async" alt="Extrait du kanban des tâches de XAMIO : une tâche à faire, de priorité haute"></picture></span>
-            <span class="pc-body"><span class="pc-meta">Produit SaaS, Technosus</span><b class="pc-title">XAMIO</b><span class="pc-fact">Résumés de réunions générés par l'IA</span><span class="pc-go">Voir l'étude de cas</span></span>
+            <span class="pc-body"><span class="pc-meta">Application web avec IA, projet personnel</span><b class="pc-title">XAMIO</b><span class="pc-fact">Résumés de réunions générés par l'IA</span><span class="pc-go">Voir l'étude de cas</span></span>
           </a></li>
         </ol>
 
@@ -767,7 +789,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <article class="case shot" id="projet-prix-inclusion" aria-labelledby="t-prix">
             <div class="intro-row">
               <div>
-                <p class="case-sector"><span class="cn num">03</span>Plateforme institutionnelle, inclusion financière</p>
+                <p class="case-sector"><span class="cn num">03</span>Application métier, inclusion financière</p>
                 <h4 id="t-prix">Plateforme du Prix de l'inclusion financière</h4>
                 <p class="case-problem">Au FIMF, j'ai mis en place la plateforme du Prix du Ministre de la Microfinance et de l'Économie sociale et solidaire pour la promotion de l'inclusion financière. Tout le processus y passe : dépôt des candidatures, tri, évaluation, délibération et désignation du lauréat.</p>
               </div>
@@ -798,9 +820,9 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <article class="case shot" id="projet-dalal-diamm" aria-labelledby="t-dalal">
             <div class="intro-row">
               <div>
-                <p class="case-sector"><span class="cn num">04</span>Application métier, mobile money et microfinance</p>
+                <p class="case-sector"><span class="cn num">04</span>Application de pilotage, mobile money et microfinance</p>
                 <h4 id="t-dalal">Dalal Diamm Services</h4>
-                <p class="case-problem">Une application pour suivre au jour le jour un réseau de caisses qui proposent des services mobile money (Wave, Orange Money, Intouch…), de l'épargne et du prêt.</p>
+                <p class="case-problem">Une application pour suivre au jour le jour un réseau de caisses qui proposent des services mobile money (Wave, Orange Money, Intouch…), de l'épargne et du prêt. Les administrateurs et les superviseurs y voient chaque jour le patrimoine du réseau, la liquidité des caisses et les écarts de comptage.</p>
               </div>
               <dl class="facts">
                 <dt>Domaine</dt><dd>Gestion de réseau, mobile money</dd>
@@ -829,12 +851,13 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <article class="case shot" id="projet-xamio" aria-labelledby="t-xamio">
             <div class="intro-row">
               <div>
-                <p class="case-sector"><span class="cn num">05</span>Produit SaaS, Technosus</p>
+                <p class="case-sector"><span class="cn num">05</span>Application web avec IA, projet personnel</p>
                 <h4 id="t-xamio">XAMIO</h4>
-                <p class="case-problem">Le produit que je développe avec Technosus : un seul outil pour les réunions, les tâches, les documents, les rendez-vous et les ateliers. Il est conçu pour des entreprises africaines, avec une tarification en FCFA et des rappels par SMS. Son nom vient du wolof « xam », savoir.</p>
+                <p class="case-problem">Une application que je développe en projet personnel : un seul outil pour les réunions, les tâches, les documents, les rendez-vous et les ateliers. Je la conçois pour des entreprises africaines, avec une tarification prévue en FCFA et des rappels par SMS. Son nom vient du wolof « xam », savoir.</p>
               </div>
               <dl class="facts">
-                <dt>Cadre</dt><dd>Technosus, que je dirige</dd>
+                <dt>Cadre</dt><dd>Projet personnel</dd>
+                <dt>Statut</dt><dd>En développement, en local</dd>
                 <dt>Outils</dt><dd>React, Laravel, PostgreSQL</dd>
               </dl>
             </div>
@@ -847,7 +870,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
               <summary><span class="pm" aria-hidden="true">+</span>Lire l'étude de cas</summary>
               <div class="study">
                 <div><h5>Problème</h5><p>Une réunion produit des décisions et des tâches qui sont ensuite notées ailleurs, ou pas du tout. L'agenda, les documents et les rappels vivent souvent dans des outils séparés.</p></div>
-                <div><h5>Contexte</h5><p>XAMIO est développé par Technosus, l'entreprise que je dirige depuis janvier 2026.</p></div>
+                <div><h5>Contexte</h5><p>XAMIO est un projet personnel. Il tourne pour l'instant en local et n'est pas encore déployé.</p></div>
                 <div class="wide"><h5>Fonctionnalités</h5>
                   <ul>
                     <li>Résumés de réunions générés par l'IA.</li>
@@ -880,19 +903,33 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
     </div>
   </section>
 
-  <!-- 2. EXPERTISE -->
+  <!-- 2. COMPÉTENCES -->
   <section class="sec" id="expertise" aria-labelledby="t-expertise">
     <div class="wrap sec-grid">
-      <div class="sec-label">Expertise</div>
+      <div class="sec-label">Compétences</div>
       <div class="sec-body">
         <h2 id="t-expertise">Ce que je sais faire.</h2>
-        <ul class="domains">
-          <li><h3>Data</h3><p>Je nettoie et structure des données d'enquête, de crédit ou de santé, et je les range dans des bases propres.</p><p class="tools">Python, SQL, PostgreSQL, MySQL, ETL</p></li>
-          <li><h3>Business intelligence</h3><p>Je construis des rapports Power BI avec des filtres par territoire et des fiches détaillées, comme celui sur les 75 IMF.</p><p class="tools">Power BI, Power Query, DAX</p></li>
-          <li><h3>Intelligence artificielle</h3><p>J'entraîne et je compare des modèles de classification, puis je les mets à disposition d'une application via une API.</p><p class="tools">Scikit-learn, Flask, IA générative</p></li>
-          <li><h3>Applications web</h3><p>Je développe des applications métiers et je les déploie avec Docker sur des serveurs Linux.</p><p class="tools">Laravel, React, Docker, Linux</p></li>
-          <li><h3>Qualité et gouvernance des données</h3><p>Je contrôle chaque mois la complétude, la cohérence et la ponctualité de données sanitaires, et j'enseigne la gouvernance des données en master.</p><p class="tools">DHIS2, qualité et protection des données</p></li>
+        <p class="intro">Mon cœur de métier, ce sont les données et l'IA. Le développement me sert à mettre ces solutions entre les mains de ceux qui décident.</p>
+
+        <h3 class="group">Cœur de métier <small>Data, BI et IA</small></h3>
+        <ul class="domains domains-core">
+          <li><h4>Data engineering</h4><p>Je nettoie et structure des données d'enquête, de crédit ou de santé, et je les range dans des bases propres.</p><p class="tools">Python, SQL, PostgreSQL, MySQL, Talend, ETL</p></li>
+          <li><h4>Business intelligence</h4><p>Je construis des rapports Power BI avec des filtres par territoire et des fiches détaillées, comme celui sur les 75 IMF.</p><p class="tools">Power BI, Power Query, DAX</p></li>
+          <li><h4>Machine learning appliqué</h4><p>J'entraîne et je compare des modèles de classification, puis je les mets à disposition d'une application via une API.</p><p class="tools">Python, Scikit-learn, Flask</p></li>
         </ul>
+
+        <h3 class="group">Ingénierie applicative <small>Pour mettre les solutions en production</small></h3>
+        <ul class="domains domains-eng">
+          <li><h4>Applications métier</h4><p>Quand un rapport ne suffit pas, je développe l'application qui rend l'analyse ou le modèle utilisable, et je la déploie avec Docker sur des serveurs Linux.</p><p class="tools">Laravel, React, JavaScript, Docker, Git, Linux</p></li>
+        </ul>
+
+        <h3 class="group">Compétences complémentaires</h3>
+        <dl class="extras">
+          <div><dt>DHIS2 et qualité des données</dt><dd>Contrôle mensuel de la complétude, de la cohérence et de la ponctualité de données sanitaires.</dd></div>
+          <div><dt>Gouvernance et protection des données</dt><dd>Enseignée en master.</dd></div>
+          <div><dt>IA générative</dt><dd>Résumés de réunions dans XAMIO.</dd></div>
+          <div><dt>Enseignement</dt><dd>Cours en licence et en master à l'UNIPRO et à l'IAM. <a href="#enseignement">Voir la section</a></dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -927,7 +964,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <li>
             <span class="when">Juil. 2026 – aujourd'hui</span>
             <div>
-              <h3>Appui technique, données sanitaires (DHIS2)<span class="kind">Prestation de services</span></h3>
+              <h3>Appui technique, données sanitaires (DHIS2) <span class="kind">Prestation de services</span></h3>
               <p class="org">Ministère de la Santé et de l'Hygiène publique</p>
               <ul>
                 <li>Intégration et contrôle qualité des données sanitaires de routine dans DHIS2 : complétude, cohérence, ponctualité.</li>
@@ -939,23 +976,12 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <li>
             <span class="when">Févr. 2026 – aujourd'hui</span>
             <div>
-              <h3>Ingénieur logiciel, data et infrastructure<span class="kind">Freelance</span></h3>
+              <h3>Ingénieur logiciel, data et infrastructure <span class="kind">Freelance</span></h3>
               <p class="org">SenPay, à distance</p>
               <ul>
                 <li>Déploiement et évolution d'une plateforme Angular et Spring Boot sur serveur Linux.</li>
                 <li>Administration de l'infrastructure Docker Compose (MySQL, Redis) et migrations de schéma.</li>
                 <li>Intégration de fournisseurs SMS avec mécanisme de basculement.</li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <span class="when">Janv. 2026 – aujourd'hui</span>
-            <div>
-              <h3>Gérant, ingénieur data et IA<span class="kind">Entrepreneuriat</span></h3>
-              <p class="org">Technosus</p>
-              <ul>
-                <li>Conception de plateformes et d'applications métiers, dont XAMIO.</li>
-                <li>Missions de conseil en data, business intelligence et IA.</li>
               </ul>
             </div>
           </li>
@@ -965,7 +991,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <li>
             <span class="when">Juil. 2024 – déc. 2025</span>
             <div>
-              <h3>Ingénieur en données et intelligence artificielle<span class="kind">Emploi, temps plein</span></h3>
+              <h3>Ingénieur en données et intelligence artificielle <span class="kind">Emploi, temps plein</span></h3>
               <p class="org">Fonds d'Impulsion de la Microfinance (FIMF), Ministère de la Microfinance et de l'Économie Sociale et Solidaire</p>
               <ul>
                 <li>Gestion des bases de données, extraction et traitement des données.</li>
@@ -979,7 +1005,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <li>
             <span class="when">Oct. 2023 – juin 2024</span>
             <div>
-              <h3>Ingénierie des données et développement<span class="kind">Stage</span></h3>
+              <h3>Ingénierie des données et développement <span class="kind">Stage</span></h3>
               <p class="org">Fonds d'Impulsion de la Microfinance (FIMF)</p>
               <ul>
                 <li>Nettoyage et structuration des données des besoins et demandes d'appui des systèmes financiers décentralisés.</li>
@@ -1023,13 +1049,11 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
       <div class="sec-body">
         <h2 id="t-enseignement">J'enseigne aussi.</h2>
         <div class="teach">
-          <blockquote>
-            <p style="margin:0">Je donne des cours en licence et en master : initiation à l'IA, Excel avancé, conteneurs Linux, gouvernance des données et de l'IA. Préparer un cours m'oblige à expliquer simplement ce que j'utilise tous les jours.</p>
-          </blockquote>
+          <p class="teach-lead">Je donne des cours en licence et en master : initiation à l'IA, Excel avancé, conteneurs Linux, gouvernance des données et de l'IA. Préparer un cours m'oblige à expliquer simplement ce que j'utilise tous les jours.</p>
           <div>
             <ul class="schools">
-              <li><b>Univers Professionnel (UNIPRO)</b><span class="num">Chargé de cours, de la licence 1 au master 1, depuis janv. 2026</span></li>
-              <li><b>Institut Africain de Management (IAM)</b><span class="num">Chargé de cours en master 1, depuis févr. 2026</span></li>
+              <li><b>Univers Professionnel (UNIPRO)</b><span class="role">Chargé de cours, de la licence 1 au master 1</span><span class="since num">Depuis janvier 2026</span></li>
+              <li><b>Institut Africain de Management (IAM)</b><span class="role">Chargé de cours en master 1</span><span class="since num">Depuis février 2026</span></li>
             </ul>
             <ul class="subjects" aria-label="Domaines enseignés">
               <li>Intelligence artificielle</li>
@@ -1041,22 +1065,6 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. OUTILS -->
-  <section class="sec" id="outils" aria-labelledby="t-outils">
-    <div class="wrap sec-grid">
-      <div class="sec-label">Outils</div>
-      <div class="sec-body">
-        <h2 id="t-outils">Ce que j'utilise.</h2>
-        <dl class="stackline">
-          <div><dt>Data</dt><dd>Python, SQL, PostgreSQL, Talend</dd></div>
-          <div><dt>BI</dt><dd>Power BI, Power Query, DAX</dd></div>
-          <div><dt>IA</dt><dd>Scikit-learn, IA générative</dd></div>
-          <div><dt>Ingénierie</dt><dd>Laravel, React, JavaScript, Docker, Git, Linux</dd></div>
-        </dl>
       </div>
     </div>
   </section>
