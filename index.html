@@ -247,7 +247,7 @@ a:hover{text-decoration-color:var(--mark)}
 .method li:last-child::after{background:var(--mark);border-color:var(--mark-ink)}
 .method h3{font-family:var(--serif);font-weight:500;font-size:22px;margin:22px 0 8px}
 .method p{margin:0;font-size:16px;line-height:1.55;color:var(--graphite);max-width:30ch}
-@media (max-width:860px){
+@media (max-width:1023px){
   .method{grid-template-columns:1fr;margin-top:32px}
   .method::before{top:0;bottom:0;left:5px;right:auto;width:1px;height:auto}
   .method li{padding:0 0 26px 36px}
@@ -423,7 +423,7 @@ dialog.lb[open]::backdrop{animation:lb-fade .2s ease-out}
 .hero-row{margin-top:28px}
 .ctas{margin-top:20px}
 .offer{margin-top:14px}
-@media (max-width:640px){.portrait{max-width:120px}}
+@media (max-width:640px){.portrait{max-width:96px}}
 @media (max-width:640px){.hero-top{grid-template-columns:1fr}}
 .hero-lead{font-size:18px}
 .hero-row{margin-top:24px}
@@ -579,6 +579,15 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 .hero-top .hero-lead{max-width:62ch}
 @media (max-width:600px){.hero-lead{font-size:17px}}
 .hero-top .portrait{margin-top:10px}
+/* Mobile : photo à côté du nom pour garder les boutons au premier écran */
+@media (max-width:640px){
+  .hero-top{grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:0;align-items:end}
+  .hero-top>div:first-child{display:contents}
+  .hero-top h1{grid-column:1;grid-row:1}
+  .hero-top .portrait{grid-column:2;grid-row:1;order:0;width:clamp(72px,22vw,112px);max-width:none;margin:0;align-self:end}
+  .hero-top .portrait figcaption{display:none}
+  .hero-top>div:first-child>*:not(h1){grid-column:1 / -1}
+}
 .chain button{padding-top:26px}
 .readout b{font-family:var(--cond);font-weight:600;font-size:17px;color:var(--ink);margin-right:12px}
 .readout{margin-top:30px}
