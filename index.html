@@ -681,7 +681,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
         <ol class="pcards" aria-label="Sommaire des projets principaux">
           <li class="pcard pcard-lead"><a href="#projet-imf">
             <span class="pc-frame"><picture><source type="image/avif" srcset="assets/card-imf.avif"><source type="image/webp" srcset="assets/card-imf.webp"><img src="assets/card-imf.jpg" width="510" height="245" loading="lazy" decoding="async" alt="Extrait du rapport Power BI : répartition des IMF par secteur d'intervention et de leurs membres entre hommes, femmes et personnes morales"></picture></span>
-            <span class="pc-body"><span class="pc-meta">Business intelligence, microfinance</span><b class="pc-title">Analyse des besoins de 75 IMF</b><span class="pc-fact">Rapport Power BI de six pages, 75 IMF et 121 agences</span><span class="pc-go">Voir l'étude de cas</span></span>
+            <span class="pc-body"><span class="pc-meta">Pipeline de données et business intelligence, microfinance</span><b class="pc-title">Analyse des besoins de 75 IMF</b><span class="pc-fact">Rapport Power BI de six pages, 75 IMF et 121 agences</span><span class="pc-go">Voir l'étude de cas</span></span>
           </a></li>
           <li class="pcard"><a href="#projet-solvabilite">
             <span class="pc-frame"><picture><source type="image/avif" srcset="assets/card-solvabilite.avif"><source type="image/webp" srcset="assets/card-solvabilite.webp"><img src="assets/card-solvabilite.jpg" width="317" height="153" loading="lazy" decoding="async" alt="Extrait d'une prédiction par lot : historique de crédit et résultat solvable ou non solvable"></picture></span>
@@ -721,13 +721,13 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
           <article class="case shot" id="projet-imf" aria-labelledby="t-imf">
             <div class="intro-row">
               <div>
-                <p class="case-sector"><span class="cn num">01</span>Business intelligence, microfinance</p>
+                <p class="case-sector"><span class="cn num">01</span>Pipeline de données et business intelligence, microfinance</p>
                 <h4 id="t-imf">Analyse des besoins de 75 institutions de microfinance</h4>
-                <p class="case-problem">J'ai construit un rapport Power BI à partir d'une enquête menée auprès de 75 institutions de microfinance (IMF) au Sénégal, qui comptent 121 agences au total. Il couvre le profil des institutions, leur digitalisation, leur financement et la nouvelle loi.</p>
+                <p class="case-problem">J'ai mis en place la chaîne de traitement d'une enquête menée auprès de 75 institutions de microfinance (IMF) au Sénégal, qui comptent 121 agences au total : collecte avec KoboToolbox, centralisation dans MySQL, puis rapport Power BI. Le rapport couvre le profil des institutions, leur digitalisation, leur financement et la nouvelle loi.</p>
               </div>
               <dl class="facts">
                 <dt>Périmètre</dt><dd>75 IMF, 121 agences</dd>
-                <dt>Outil</dt><dd>Power BI</dd>
+                <dt>Outils</dt><dd>KoboToolbox, MySQL, Power BI</dd>
               </dl>
             </div>
             <figure class="gallery">
@@ -739,7 +739,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
               <summary><span class="pm" aria-hidden="true">+</span>Lire l'étude de cas</summary>
               <div class="study">
                 <div><h5>Problème</h5><p>Les réponses de l'enquête devaient pouvoir se comparer d'une institution à l'autre et se filtrer par territoire, pour voir où se situent les besoins et orienter l'appui apporté aux IMF.</p></div>
-                <div><h5>Ce que j'ai fait</h5><p>Un rapport de six pages : accueil et cartographie, informations générales, systèmes d'information et digitalisation, financement, nouvelle loi, et PACTIFU. Les filtres par région, département, commune et institution sont synchronisés d'une page à l'autre.</p></div>
+                <div><h5>Ce que j'ai fait</h5><p>Les réponses sont collectées avec KoboToolbox et centralisées dans une base MySQL, qui alimente le rapport. Le rapport compte six pages : accueil et cartographie, informations générales, systèmes d'information et digitalisation, financement, nouvelle loi, et PACTIFU. Les filtres par région, département, commune et institution sont synchronisés d'une page à l'autre.</p></div>
                 <div class="wide"><h5>Dans le rapport</h5>
                   <ul>
                     <li>Les chiffres clés en tête de page : IMF, agences, membres et membres actifs.</li>
@@ -932,7 +932,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
 
         <h3 class="group">Cœur de métier <small>Data, BI et IA</small></h3>
         <ul class="domains domains-core">
-          <li><h4>Data engineering</h4><p>Je nettoie et structure des données d'enquête, de crédit ou de santé, et je les range dans des bases propres.</p><p class="tools">Python, SQL, PostgreSQL, MySQL, Talend, ETL, DHIS2</p></li>
+          <li><h4>Data engineering</h4><p>Je nettoie et structure des données d'enquête, de crédit ou de santé, et je les range dans des bases propres.</p><p class="tools">Python, SQL, PostgreSQL, MySQL, KoboToolbox, Talend, ETL, DHIS2</p></li>
           <li><h4>Business intelligence</h4><p>Je construis des rapports Power BI avec des filtres par territoire et des fiches détaillées, comme celui sur les 75 IMF.</p><p class="tools">Power BI, Power Query, DAX</p></li>
           <li><h4>Machine learning appliqué</h4><p>J'entraîne et je compare des modèles de classification, puis je les mets à disposition d'une application via une API.</p><p class="tools">Python, Scikit-learn, Flask</p></li>
         </ul>
@@ -1015,6 +1015,7 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
               <p class="org">Fonds d'Impulsion de la Microfinance (FIMF), Ministère de la Microfinance et de l'Économie Sociale et Solidaire</p>
               <ul>
                 <li>Gestion des bases de données, extraction et traitement des données.</li>
+                <li>Pipeline de données de KoboToolbox vers MySQL, qui alimente les rapports Power BI.</li>
                 <li>Tableaux de bord décisionnels et reporting sous Power BI.</li>
                 <li>Modèles de machine learning et outils internes.</li>
                 <li>Mise en place de la plateforme du Prix de l'inclusion financière (févr. – août 2025).</li>
