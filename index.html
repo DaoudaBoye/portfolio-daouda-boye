@@ -1176,6 +1176,18 @@ input,textarea{width:100%;min-width:0;box-sizing:border-box}
   }
   window.addEventListener('hashchange', openFromHash); openFromHash();
 
+  // Lien court ?projet=solvabilite : fonctionne même si une redirection supprime l'ancre (#)
+  (function(){
+    var m = /[?&]projet=([a-z-]+)/.exec(location.search);
+    if (!m || location.hash) return;
+    var el = document.getElementById('projet-' + m[1]);
+    if (!el || !el.classList.contains('case')) return;
+    history.replaceState(null, '', location.pathname + location.search + '#' + el.id);
+    openFromHash();
+    el.scrollIntoView();
+    window.addEventListener('load', function(){ el.scrollIntoView(); });
+  })();
+
 
 
   // Déroulement des études de cas
