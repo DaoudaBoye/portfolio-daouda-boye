@@ -190,3 +190,12 @@
   if (window.ResizeObserver) new ResizeObserver(queue).observe(document.body);
   update();
 })();
+
+/* Ombre de l'en-tête dès qu'on a défilé */
+(function(){
+  var top = document.querySelector('.top');
+  if (!top) return;
+  function upd(){ top.classList.toggle('scrolled', (window.pageYOffset || document.documentElement.scrollTop) > 8); }
+  window.addEventListener('scroll', upd, {passive:true});
+  upd();
+})();
