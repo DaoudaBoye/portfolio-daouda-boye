@@ -114,7 +114,8 @@ a:hover{text-decoration-color:var(--mark)}
 
 /* Fig. 1 la chaîne */
 .chain{margin:clamp(56px,8vw,96px) 0 0;border-top:1px solid var(--ink);padding-top:22px}
-.chain-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--graphite);margin-bottom:26px}
+.chain-head{font-size:14px;color:var(--graphite);margin-bottom:26px;text-wrap:pretty}
+.chain-hint{color:var(--ink);font-weight:500;margin-left:6px}
 .chain-head strong{color:var(--ink);font-weight:500}
 .chain ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);position:relative}
 .chain ol::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--ink);transform-origin:left;transform:scaleX(1)}
@@ -123,7 +124,9 @@ a:hover{text-decoration-color:var(--mark)}
 .chain button::before{content:"";position:absolute;top:3px;left:0;width:13px;height:13px;border:1px solid var(--ink);background:var(--paper);border-radius:50%;transition:background .2s}
 .chain button:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
 .chain .k{display:block;font-size:13px;color:var(--graphite)}
-.chain .w{display:block;font-family:var(--cond);font-weight:600;font-size:clamp(16px,1.7vw,23px);line-height:1.1;margin-top:2px;overflow-wrap:anywhere}
+.chain .w{display:block;font-family:var(--cond);font-weight:600;font-size:clamp(16px,1.7vw,23px);line-height:1.1;margin-top:2px;overflow-wrap:anywhere;text-decoration:underline;text-decoration-thickness:1px;text-decoration-color:var(--graphite);text-underline-offset:7px}
+.chain button:hover .w{text-decoration-thickness:2px;text-decoration-color:var(--ink)}
+.chain li.on .w{text-decoration-thickness:3px;text-decoration-color:var(--ink)}
 .chain li.on button::before,.chain button:hover::before{background:var(--mark);border-color:var(--mark-ink)}
 .readout{margin:26px 0 0;font-family:var(--serif);font-size:19px;min-height:1.6em;max-width:60ch}
 .readout b{font-family:var(--sans);font-weight:500;font-size:15px;margin-right:10px;color:var(--graphite)}
@@ -134,6 +137,7 @@ a:hover{text-decoration-color:var(--mark)}
 @keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @media (max-width:760px){
+  .chain-hint{display:block;margin:6px 0 0}
   .chain ol{grid-template-columns:1fr;gap:0}
   .chain ol::before{top:6px;bottom:6px;left:6px;right:auto;width:1px;height:auto;transform-origin:top}
   .chain button{padding:6px 0 14px 30px}
@@ -143,6 +147,7 @@ a:hover{text-decoration-color:var(--mark)}
 
 /* Sections */
 .sec{padding:clamp(56px,10vw,128px) 0 0}
+.hero + .sec{padding-top:clamp(40px,5.5vw,80px)}
 .sec-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
 .sec-label{grid-column:1 / 4;font-size:15px;color:var(--graphite);padding-top:10px;border-top:1px solid var(--rule)}
 .sec-label .n{display:block;font-family:var(--cond);font-weight:600;font-size:15px;color:var(--ink)}

@@ -3,8 +3,15 @@
 (function(){
   var b = document.getElementById('to-top');
   if (!b) return;
-  function upd(){ b.classList.toggle('show', (window.pageYOffset || document.documentElement.scrollTop) > 600); }
+  var foot = document.querySelector('footer');
+  function upd(){
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    // Masqué quand le pied de page est visible : il a déjà son lien « Haut de page »
+    var nearFoot = foot && foot.getBoundingClientRect().top < window.innerHeight - 8;
+    b.classList.toggle('show', y > 600 && !nearFoot);
+  }
   window.addEventListener('scroll', upd, {passive:true});
+  window.addEventListener('resize', upd);
   upd();
 })();
 
