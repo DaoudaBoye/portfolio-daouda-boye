@@ -48,6 +48,7 @@ a:hover{text-decoration-color:var(--mark)}
 .nav{display:flex;align-items:center;gap:22px;font-size:15px}
 .nav a{text-decoration:none;color:var(--graphite)}
 .nav a:hover{color:var(--ink)}
+.nav a[aria-current]{color:var(--ink);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px;text-decoration-color:var(--ink)}
 .theme{font:inherit;font-size:14px;background:none;border:1px solid var(--rule);color:var(--ink);padding:5px 10px;border-radius:3px;cursor:pointer}
 .theme:hover{border-color:var(--ink)}
 .theme .ico{display:none}

@@ -157,3 +157,36 @@
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') set(false); });
   window.addEventListener('resize', function(){ if (window.innerWidth > 860) set(false); });
 })();
+
+/* Section active dans la navigation */
+(function(){
+  var pairs = [];
+  document.querySelectorAll('#nav-links a[href^="#"]').forEach(function(a){
+    var s = document.querySelector(a.getAttribute('href'));
+    if (!s) return;
+    var h = document.getElementById(s.getAttribute('aria-labelledby') || '') || s;
+    pairs.push({ a: a, h: h });
+  });
+  if (!pairs.length) return;
+  var pending = false;
+  function update(){
+    pending = false;
+    // Ligne de lecture : sous l'en-tête collant, vers le tiers haut de l'écran
+    var line = 60 + window.innerHeight * 0.3;
+    var current = null;
+    pairs.forEach(function(p){ if (p.h.getBoundingClientRect().top <= line) current = p; });
+    // En bas de page, la dernière section (Contact) est active même si elle est courte
+    if (window.innerHeight + (window.pageYOffset || document.documentElement.scrollTop) >= document.documentElement.scrollHeight - 4) current = pairs[pairs.length - 1];
+    pairs.forEach(function(p){
+      if (p === current) p.a.setAttribute('aria-current', 'location');
+      else p.a.removeAttribute('aria-current');
+    });
+  }
+  function queue(){ if (!pending){ pending = true; window.requestAnimationFrame(update); } }
+  window.addEventListener('scroll', queue, {passive:true});
+  window.addEventListener('resize', queue);
+  window.addEventListener('load', queue);
+  // Les images chargées en différé peuvent décaler la page sans défilement : on recalcule alors aussi
+  if (window.ResizeObserver) new ResizeObserver(queue).observe(document.body);
+  update();
+})();
